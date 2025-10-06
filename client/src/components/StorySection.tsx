@@ -124,11 +124,6 @@ const StorySection = () => {
               onMouseLeave={() => handleMouseLeave(card.id)}
               data-testid={`card-story-${card.id}`}
             >
-              {/* Flower Decorations */}
-              <img src="/images/flower3_1759741371015.png" alt="" className="absolute top-2 left-2 w-12 sm:w-16 md:w-20 opacity-80 pointer-events-none" />
-              <img src="/images/flower5_1759741371013.png" alt="" className="absolute bottom-2 right-2 w-16 sm:w-20 md:w-24 opacity-80 pointer-events-none transform rotate-12" />
-              <img src="/images/flower7_1759741371011.png" alt="" className="absolute top-2 right-2 w-10 sm:w-12 md:w-16 opacity-70 pointer-events-none transform -rotate-12" />
-              
               <div className={`grid lg:grid-cols-2 gap-8 lg:gap-16 items-center`}>
                 {/* Content */}
                 <div className={`space-y-4 sm:space-y-6 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
