@@ -81,10 +81,6 @@ const VenueSection = () => {
 
               {/* Venue Content */}
               <div className="max-w-3xl mx-auto text-center space-y-6 relative">
-                {/* Flower Decorations for each venue */}
-                <img src={index === 0 ? '/images/flower4_1759741371013.png' : '/images/boquet_1759741371019.png'} alt="" className="absolute -top-4 -left-4 w-16 md:w-20 opacity-80" />
-                <img src="/images/flower6_1759741371012.png" alt="" className="absolute -top-4 -right-4 w-20 md:w-24 opacity-80 transform rotate-12" />
-                
                 {/* Venue Image */}
                 <div className="mb-8">
                   <img
