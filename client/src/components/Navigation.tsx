@@ -7,7 +7,7 @@ const Navigation = () => {
   const [activeSection, setActiveSection] = useState('');
   const [isVisible, setIsVisible] = useState(false);
 
-  const navItems = [
+  const navItems: Array<{ name: string; href: string; external?: boolean }> = [
     { name: 'Our Moments', href: '#slideshow' },
     { name: 'Countdown', href: '#countdown' },
     { name: 'Our Story', href: '#story' },
@@ -15,7 +15,7 @@ const Navigation = () => {
     { name: 'Venue', href: '#venue' },
     { name: 'Dress Code', href: '#dresscode' },
     { name: 'Hashtag & Gifts', href: '#hashtag-gifts' },
-    { name: 'RSVP', href: '#rsvp' },
+    { name: 'RSVP', href: 'https://jerome-ericka-rsvp.replit.app', external: true },
     { name: 'Hotel', href: '#hotel-accommodation' },
     { name: 'FAQ', href: '#faq' }
   ];
@@ -53,7 +53,13 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (href: string) => {
+  const scrollToSection = (href: string, isExternal?: boolean) => {
+    if (isExternal) {
+      window.open(href, '_blank', 'noopener,noreferrer');
+      setIsOpen(false);
+      return;
+    }
+    
     const sectionId = href.slice(1); // Remove the # from the href
     const element = document.getElementById(sectionId);
     
@@ -110,7 +116,7 @@ const Navigation = () => {
               {navItems.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => scrollToSection(item.href, item.external)}
                   className={`px-4 py-2 text-sm font-medium font-times rounded-none transition-all duration-300 hover:bg-foreground hover:text-background border border-transparent ${
                     activeSection === item.href.slice(1)
                       ? 'text-background bg-foreground border-foreground'
@@ -144,7 +150,7 @@ const Navigation = () => {
             {navItems.map((item) => (
               <button
                 key={item.name}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => scrollToSection(item.href, item.external)}
                 className={`block w-full text-left px-3 py-2 text-base font-medium font-times rounded-none transition-all duration-300 hover:bg-foreground hover:text-background ${
                   activeSection === item.href.slice(1)
                     ? 'text-background bg-foreground'

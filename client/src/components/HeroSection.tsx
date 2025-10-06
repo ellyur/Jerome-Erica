@@ -118,7 +118,7 @@ const HeroSection = () => {
           
           {/* RSVP Button */}
           <div className={`transition-all duration-700 opacity-100 mt-8 ${animationsEnabled ? 'animate-fade-scale' : ''}`}>
-            <a href="#rsvp">
+            <a href="https://jerome-ericka-rsvp.replit.app" target="_blank" rel="noopener noreferrer">
               <button
                 className="newspaper-rsvp-btn"
                 aria-label="RSVP to Wedding"
