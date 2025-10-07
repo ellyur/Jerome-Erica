@@ -1,17 +1,23 @@
 import { motion } from 'framer-motion';
 import { useAnimationContext } from '@/contexts/AnimationContext';
-import { Heart, Bell, Camera, Home, Utensils, PartyPopper } from 'lucide-react';
+
+import assemblyImg from '@assets/assembly_1759833247684.png';
+import ceremonyImg from '@assets/ceremonyy_1759833247684.png';
+import photosImg from '@assets/photos_1759833247685.png';
+import receptionImg from '@assets/receptionn_1759833247685.png';
+import dinnerImg from '@assets/dinner_1759833247686.png';
+import partyImg from '@assets/party_1759833247686.png';
 
 const FAQSection = () => {
   const { animationsEnabled } = useAnimationContext();
 
   const timelineEvents = [
-    { time: 'ASSEMBLY', icon: Heart },
-    { time: 'CEREMONY', icon: Bell },
-    { time: 'PHOTOS', icon: Camera },
-    { time: 'RECEPTION', icon: Home },
-    { time: 'DINNER', icon: Utensils },
-    { time: 'PARTY', icon: PartyPopper },
+    { time: 'ASSEMBLY', image: assemblyImg },
+    { time: 'CEREMONY', image: ceremonyImg },
+    { time: 'PHOTOS', image: photosImg },
+    { time: 'RECEPTION', image: receptionImg },
+    { time: 'DINNER', image: dinnerImg },
+    { time: 'PARTY', image: partyImg },
   ];
 
   const faqs = [
@@ -139,15 +145,15 @@ const FAQSection = () => {
                   transition={animationsEnabled ? { duration: 0.6, delay: 12 + (index * 0.1) } : { duration: 0 }}
                   data-testid={`timeline-event-${index}`}
                 >
-                  {/* Left Side - Event Name or Icon (alternating) */}
+                  {/* Left Side - Event Name or Image (alternating) */}
                   <div className="flex-1 flex justify-end items-center">
                     {index % 2 === 0 ? (
                       <p className="text-base sm:text-lg md:text-xl font-bold tracking-wider text-right" data-testid={`text-timeline-${index}`}>
                         {event.time}
                       </p>
                     ) : (
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-background border-2 sm:border-4 border-foreground flex items-center justify-center z-10">
-                        <event.icon className="w-8 h-8 sm:w-10 sm:h-10 text-foreground" strokeWidth={1.5} />
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-background border-2 sm:border-4 border-foreground flex items-center justify-center z-10 p-2">
+                        <img src={event.image} alt={event.time} className="w-full h-full object-contain" />
                       </div>
                     )}
                   </div>
@@ -155,15 +161,15 @@ const FAQSection = () => {
                   {/* Center Dot */}
                   <div className="w-3 h-3 bg-foreground rounded-full z-10 flex-shrink-0"></div>
 
-                  {/* Right Side - Icon or Event Name (alternating) */}
+                  {/* Right Side - Image or Event Name (alternating) */}
                   <div className="flex-1 flex justify-start items-center">
                     {index % 2 === 1 ? (
                       <p className="text-base sm:text-lg md:text-xl font-bold tracking-wider text-left" data-testid={`text-timeline-${index}`}>
                         {event.time}
                       </p>
                     ) : (
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-background border-2 sm:border-4 border-foreground flex items-center justify-center z-10">
-                        <event.icon className="w-8 h-8 sm:w-10 sm:h-10 text-foreground" strokeWidth={1.5} />
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-background border-2 sm:border-4 border-foreground flex items-center justify-center z-10 p-2">
+                        <img src={event.image} alt={event.time} className="w-full h-full object-contain" />
                       </div>
                     )}
                   </div>
