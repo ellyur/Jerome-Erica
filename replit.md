@@ -170,3 +170,18 @@ Successfully migrated from Lovable to Replit environment:
   - Shows "Perfect Score!" message only for 5/5, "Amazing Score!" with actual score for 4/5
   - Implemented functional state updates for reliable score tracking
   - Adjusted invitation paper dimensions: wider (max-w-5xl) and shorter (reduced padding and spacing)
+- **2025-10-07**: Complete website redesign to newspaper-style aesthetic:
+  - Redesigned entire website to match reference screenshots with newspaper/vintage aesthetic
+  - Updated color scheme: beige/cream background (#F5F1E8) with black text
+  - Implemented consistent section headers: black background bars with "Lovers" script font in white
+  - **HeroSection**: Converted to "SAVE the DATE" photo collage with date numbers and 4 photos
+  - **CountdownSection**: Combined countdown timer with "Our Story" section and family photo
+  - **VenueSection**: Renamed to "Finer Details" with ceremony and reception information
+  - **HotelAccommodationSection**: Added room types (Deluxe, Superior, Standard) with pricing and booking info
+  - **DressCodeSection**: Renamed to "What to WEAR?" with color palette guidance
+  - **HashtagGiftsSection**: Split into Gift Guide and "Capture our Moments" sections
+  - **FAQSection**: Redesigned with Wedding Timeline section showing schedule
+  - Removed sections: ImageLoop, StorySection, ScrollTriggeredTimeline, CoverSection, InvitationRevealSection, RSVPSection
+  - Updated Index.tsx to streamline sections and match reference design
+  - All components use existing images from Cloudinary
+  - Maintained dark mode compatibility with CSS variable updates
