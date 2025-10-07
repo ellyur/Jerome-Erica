@@ -8,6 +8,8 @@ import saveDate3 from "@assets/photo_2025-10-07_17-11-16_1759828380358.jpg";
 
 import save_the_date_08 from "@assets/save-the-date-08.jpg";
 
+import save_the_date_15 from "@assets/save-the-date-15.jpg";
+
 const HeroSection = () => {
   const [showElements, setShowElements] = useState(false);
   const { animationsEnabled } = useAnimationContext();
@@ -66,7 +68,7 @@ const HeroSection = () => {
             {/* Bottom Center - Photo 2 with border */}
             <div className="border-4 border-foreground p-2 bg-background">
               <img 
-                src={saveDate2}
+                src={save_the_date_15}
                 alt="Wedding Photo 2" 
                 className="w-full h-auto"
                 data-testid="img-save-date-2"
