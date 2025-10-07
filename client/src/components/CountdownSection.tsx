@@ -4,6 +4,8 @@ import { useAnimationContext } from '@/contexts/AnimationContext';
 
 import familyPhoto from "@assets/photo_2025-10-07_17-11-25_1759828380356.jpg";
 
+import our_love_story from "@assets/our-love-story.jpg";
+
 const CountdownSection = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -128,7 +130,7 @@ const CountdownSection = () => {
           {/* Family Photo */}
           <div className="max-w-3xl mx-auto mb-8 border-4 border-foreground p-2 bg-background">
             <img 
-              src={familyPhoto}
+              src={our_love_story}
               alt="Our Family" 
               className="w-full h-auto"
               data-testid="img-family-photo"
