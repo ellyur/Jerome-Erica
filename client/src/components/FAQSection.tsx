@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useAnimationContext } from '@/contexts/AnimationContext';
-import { Heart, Bell, Camera, Home, Utensils, PartyPopper } from 'lucide-react';
+import { Heart, Bell, Camera, Home, Utensils, PartyPopper, CameraIcon } from 'lucide-react';
 
 const FAQSection = () => {
   const { animationsEnabled } = useAnimationContext();
@@ -42,12 +42,74 @@ const FAQSection = () => {
       transition={animationsEnabled ? { duration: 1, delay: 11.5 } : { duration: 0 }}
     >
       <div className="max-w-6xl mx-auto">
-        {/* How do I RSVP Section */}
+        {/* Camera Icon Section */}
+        <motion.div 
+          className="mb-12 text-center"
+          initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 11.5 } : { duration: 0 }}
+        >
+          <div className="flex justify-center mb-4">
+            <Camera className="w-16 h-16 sm:w-20 sm:h-20 text-foreground" strokeWidth={1.5} />
+          </div>
+          <p className="text-sm sm:text-base leading-relaxed italic mb-2">
+            Capture the love after our unplugged ceremony!
+          </p>
+          <p className="text-sm sm:text-base leading-relaxed mb-2">
+            Share you wedding photos using our official wedding hashtag
+          </p>
+          <p className="text-base sm:text-lg font-bold">
+            #UnbERICKAbleLoveWithJEROME
+          </p>
+        </motion.div>
+
+        {/* Frequently Asked Questions Header */}
+        <motion.div 
+          className="mb-12"
+          initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 11.7 } : { duration: 0 }}
+        >
+          <div className="bg-foreground py-4 px-8 text-center">
+            <h2 
+              className="text-2xl sm:text-3xl text-background font-script italic"
+              data-testid="text-faq-title"
+            >
+              Frequently Asked Questions
+            </h2>
+          </div>
+        </motion.div>
+
+        {/* FAQ Items */}
+        <div className="max-w-4xl mx-auto space-y-6 mb-16">
+          {faqs.map((faq, index) => (
+            <motion.div
+              key={index}
+              initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={animationsEnabled ? { duration: 0.6, ease: "easeOut", delay: 11.9 + (index * 0.1) } : { duration: 0 }}
+              data-testid={`faq-item-${index}`}
+            >
+              <div className="bg-foreground py-3 px-4 sm:px-6">
+                <h3 className="text-sm sm:text-base font-bold text-background" data-testid={`faq-question-${index}`}>
+                  {faq.question}
+                </h3>
+              </div>
+              <div className="py-4 px-4 sm:px-6">
+                <p className="text-sm sm:text-base leading-relaxed" data-testid={`faq-answer-${index}`}>
+                  {faq.answer}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* How do I RSVP Section - moved to bottom */}
         <motion.div 
           className="mb-16 text-center max-w-3xl mx-auto bg-muted/20 p-8 rounded-lg"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 11.6 } : { duration: 0 }}
+          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 12.3 } : { duration: 0 }}
         >
           <h3 className="text-xl sm:text-2xl font-bold mb-4 bg-muted/30 py-2" data-testid="text-rsvp-question">
             HOW DO I RSVP?
@@ -80,64 +142,85 @@ const FAQSection = () => {
 
           {/* Timeline */}
           <div className="max-w-4xl mx-auto relative">
-            {/* Vertical Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-foreground hidden md:block"></div>
+            {/* Vertical Line - centered on mobile and desktop */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-foreground"></div>
 
             {/* Timeline Events */}
-            <div className="space-y-12">
+            <div className="space-y-8 md:space-y-12">
               {timelineEvents.map((event, index) => (
                 <motion.div
                   key={index}
-                  className="flex items-center justify-between md:justify-center gap-8 relative"
+                  className="flex items-center justify-center gap-4 md:gap-8 relative"
                   initial={animationsEnabled ? { opacity: 0, x: index % 2 === 0 ? -30 : 30 } : { opacity: 1, x: 0 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={animationsEnabled ? { duration: 0.6, delay: 12 + (index * 0.1) } : { duration: 0 }}
                   data-testid={`timeline-event-${index}`}
                 >
-                  {/* Left Side - Event Name (alternating) */}
-                  <div className={`flex-1 text-right ${index % 2 === 0 ? 'md:block' : 'md:hidden'}`}>
-                    <p className="text-lg sm:text-xl font-bold tracking-wider" data-testid={`text-timeline-${index}`}>
-                      {event.time}
-                    </p>
+                  {/* Left Side - Event Name or Icon (alternating) */}
+                  <div className="flex-1 flex justify-end items-center">
+                    {index % 2 === 0 ? (
+                      <p className="text-base sm:text-lg md:text-xl font-bold tracking-wider text-right" data-testid={`text-timeline-${index}`}>
+                        {event.time}
+                      </p>
+                    ) : (
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-background border-2 sm:border-4 border-foreground flex items-center justify-center z-10">
+                        <event.icon className="w-8 h-8 sm:w-10 sm:h-10 text-foreground" strokeWidth={1.5} />
+                      </div>
+                    )}
                   </div>
 
-                  {/* Center - Icon */}
-                  <div className="w-16 h-16 bg-background border-4 border-foreground rounded-full flex items-center justify-center z-10 flex-shrink-0">
-                    <event.icon className="w-8 h-8 text-foreground" strokeWidth={2} />
-                  </div>
+                  {/* Center Dot */}
+                  <div className="w-3 h-3 bg-foreground rounded-full z-10 flex-shrink-0"></div>
 
-                  {/* Right Side - Event Name (alternating) */}
-                  <div className={`flex-1 text-left ${index % 2 === 1 ? 'md:block' : 'md:hidden'} hidden md:block`}>
-                    <p className="text-lg sm:text-xl font-bold tracking-wider">
-                      {event.time}
-                    </p>
+                  {/* Right Side - Icon or Event Name (alternating) */}
+                  <div className="flex-1 flex justify-start items-center">
+                    {index % 2 === 1 ? (
+                      <p className="text-base sm:text-lg md:text-xl font-bold tracking-wider text-left" data-testid={`text-timeline-${index}`}>
+                        {event.time}
+                      </p>
+                    ) : (
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-background border-2 sm:border-4 border-foreground flex items-center justify-center z-10">
+                        <event.icon className="w-8 h-8 sm:w-10 sm:h-10 text-foreground" strokeWidth={1.5} />
+                      </div>
+                    )}
                   </div>
                 </motion.div>
               ))}
             </div>
-          </div>
-        </motion.div>
 
-        {/* FAQ Items */}
-        <div className="max-w-4xl mx-auto space-y-8">
-          {faqs.map((faq, index) => (
-            <motion.div
-              key={index}
-              className="bg-muted/20 p-6 rounded-lg"
-              initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={animationsEnabled ? { duration: 0.6, ease: "easeOut", delay: 12.6 + (index * 0.1) } : { duration: 0 }}
-              data-testid={`faq-item-${index}`}
-            >
-              <h3 className="text-base sm:text-lg font-bold mb-3 bg-muted/30 py-2 px-4" data-testid={`faq-question-${index}`}>
-                {faq.question}
-              </h3>
-              <p className="text-sm sm:text-base leading-relaxed px-4" data-testid={`faq-answer-${index}`}>
-                {faq.answer}
-              </p>
-            </motion.div>
-          ))}
-        </div>
+            {/* Bottom dot */}
+            <div className="flex justify-center mt-4">
+              <div className="w-3 h-3 bg-foreground rounded-full"></div>
+            </div>
+          </div>
+
+          {/* Closing Message */}
+          <motion.div 
+            className="mt-12 text-center max-w-3xl mx-auto px-4"
+            initial={animationsEnabled ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 12.8 } : { duration: 0 }}
+          >
+            <p className="text-sm sm:text-base leading-relaxed mb-4">
+              It's an honor to finally share our joy with you as we prepare to embark on our lifelong journey together.
+            </p>
+            <p className="text-sm sm:text-base leading-relaxed mb-4">
+              We've dreamt of this day, and now, with our hearts full of love and excitement, we can't wait to celebrate our marriage surrounded by the people who mean the most to us.
+            </p>
+            <p className="text-sm sm:text-base leading-relaxed mb-4">
+              Your presence would truly make our wedding complete, and we eagerly anticipate creating unforgettable memories with each of you.
+            </p>
+            <p className="text-sm sm:text-base leading-relaxed mb-4">
+              See you there!
+            </p>
+            <p className="text-sm sm:text-base leading-relaxed">
+              Love,
+            </p>
+            <p className="text-sm sm:text-base leading-relaxed font-bold">
+              Jerome & Ericka
+            </p>
+          </motion.div>
+        </motion.div>
       </div>
     </motion.section>
   );
