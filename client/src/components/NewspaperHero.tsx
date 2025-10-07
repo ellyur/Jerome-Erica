@@ -1,5 +1,7 @@
 import heroPhoto from "@assets/photo_2025-10-07_17-37-04_1759829841162.jpg";
 
+import hero_section from "@assets/hero-section.jpg";
+
 const NewspaperHero = () => {
   return (
     <section 
@@ -61,7 +63,7 @@ const NewspaperHero = () => {
         <div className="mb-6 max-w-3xl mx-auto" style={{ border: '3px solid #1c1c1c', padding: '8px', backgroundColor: '#f5f1e8' }}>
           <div style={{ border: '1px solid #1c1c1c', padding: '4px' }}>
             <img 
-              src={heroPhoto}
+              src={hero_section}
               alt="Jerome and Ericka" 
               className="w-full h-auto"
               style={{ filter: 'grayscale(100%)' }}

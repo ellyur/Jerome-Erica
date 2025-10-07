@@ -155,6 +155,34 @@ const CountdownSection = () => {
               By October 2024, amidst the exhilaration of a Ne-Yo concert, Jerome proposed, symbolizing their journey, love, and dedication to each other. This moment encapsulated the excitement and promise they have built together. As they embark on this new chapter, they envision a future of shared adventures with their children and a continued embrace of life's beautiful chaos, grateful for the unwavering support of their family and friends who remind them that true love is fortified by community and shared encouragement.
             </p>
           </div>
+
+          {/* Family Photos Grid */}
+          <div className="max-w-4xl mx-auto mt-8 px-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              {/* Photo 1 */}
+              <div className="border-4 border-foreground p-2 bg-background">
+                <img 
+                  src={familyPhoto}
+                  alt="Family Photo 1" 
+                  className="w-full h-auto"
+                  data-testid="img-story-photo-1"
+                />
+              </div>
+
+              {/* Photo 2 */}
+              <div className="border-4 border-foreground p-2 bg-background">
+                <img 
+                  src={familyPhoto}
+                  alt="Family Photo 2" 
+                  className="w-full h-auto"
+                  data-testid="img-story-photo-2"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Decorative Double Line */}
+          <div className="newspaper-double-line mt-8"></div>
         </motion.div>
       </div>
     </motion.section>
