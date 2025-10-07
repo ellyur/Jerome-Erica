@@ -17,24 +17,31 @@ const RSVPSection = () => {
       <div className="max-w-6xl mx-auto">
         {/* Black Header Bar */}
         <div className="text-center mb-8">
-          <div className="bg-foreground py-4 px-8 mb-8">
+          <div className="bg-foreground py-4 px-8">
             <h2 
-              className="text-3xl sm:text-4xl text-background"
+              className="text-2xl sm:text-3xl text-background font-bold tracking-wider"
               data-testid="text-rsvp-title"
             >
-              <span className="font-script italic">RSVP</span>
+              RSVP
             </h2>
           </div>
         </div>
 
-        {/* Couple Image */}
-        <div className="flex justify-center mb-8">
-          <img 
-            src={coupleImg} 
-            alt="Jerome and Ericka" 
-            className="w-48 h-48 sm:w-64 sm:h-64 object-contain"
-            data-testid="img-couple-rsvp"
-          />
+        {/* RSVP Description */}
+        <div className="text-center mb-8 px-4">
+          <p className="text-sm sm:text-base italic mb-4" data-testid="text-rsvp-description">
+            Please confirm your attendance on or before February 10, 2026 to ensure you are included on our final guest list.
+          </p>
+          <p className="text-sm sm:text-base italic" data-testid="text-rsvp-instruction">
+            <a 
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf8-NfOjB3V0c3Tvd37RGM9C9SOi2oL2gyuwqihjyQxoJWmNg/viewform?usp=dialog" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="underline cursor-pointer"
+            >
+              Click here
+            </a> or fill out the form below to RSVP.
+          </p>
         </div>
 
         {/* Google Form Iframe */}
