@@ -93,24 +93,6 @@ const HashtagGiftsSection = () => {
             #UnbERICKAbleLoveWithJEROME
           </p>
         </motion.div>
-
-        {/* FAQ Subsection - Frequently Asked Questions Header */}
-        <motion.div 
-          className="text-center"
-          initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 0.9 } : { duration: 0 }}
-        >
-          {/* Black Header Bar */}
-          <div className="bg-foreground py-4 px-8 mb-8">
-            <h2 
-              className="text-3xl sm:text-4xl text-background"
-              data-testid="text-faq-header-title"
-            >
-              <span className="font-script italic">Frequently Asked</span> Questions
-            </h2>
-          </div>
-        </motion.div>
       </div>
     </motion.section>
   );
