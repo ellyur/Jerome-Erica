@@ -85,32 +85,32 @@ const CountdownSection = () => {
 
         {/* Countdown Timer */}
         <motion.div 
-          className="border-4 border-foreground inline-block px-8 py-6 mb-12 bg-background"
+          className="border-4 border-foreground px-4 sm:px-8 py-4 sm:py-6 mb-12 bg-background mx-auto max-w-full"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 0.7 } : { duration: 0 }}
         >
-          <div className="flex gap-6 sm:gap-8 items-center justify-center">
+          <div className="flex gap-2 sm:gap-6 md:gap-8 items-center justify-center">
             <div className="text-center" data-testid="countdown-days">
-              <div className="text-5xl sm:text-6xl font-bold" style={{ fontFamily: "'Impact', sans-serif" }}>
+              <div className="text-3xl sm:text-5xl md:text-6xl font-bold" style={{ fontFamily: "'Impact', sans-serif" }}>
                 {timeLeft.days}
               </div>
             </div>
-            <div className="text-4xl font-bold">:</div>
+            <div className="text-2xl sm:text-4xl font-bold">:</div>
             <div className="text-center" data-testid="countdown-hours">
-              <div className="text-5xl sm:text-6xl font-bold" style={{ fontFamily: "'Impact', sans-serif" }}>
+              <div className="text-3xl sm:text-5xl md:text-6xl font-bold" style={{ fontFamily: "'Impact', sans-serif" }}>
                 {padNumber(timeLeft.hours)}
               </div>
             </div>
-            <div className="text-4xl font-bold">:</div>
+            <div className="text-2xl sm:text-4xl font-bold">:</div>
             <div className="text-center" data-testid="countdown-minutes">
-              <div className="text-5xl sm:text-6xl font-bold" style={{ fontFamily: "'Impact', sans-serif" }}>
+              <div className="text-3xl sm:text-5xl md:text-6xl font-bold" style={{ fontFamily: "'Impact', sans-serif" }}>
                 {padNumber(timeLeft.minutes)}
               </div>
             </div>
-            <div className="text-4xl font-bold">:</div>
+            <div className="text-2xl sm:text-4xl font-bold">:</div>
             <div className="text-center" data-testid="countdown-seconds">
-              <div className="text-5xl sm:text-6xl font-bold" style={{ fontFamily: "'Impact', sans-serif" }}>
+              <div className="text-3xl sm:text-5xl md:text-6xl font-bold" style={{ fontFamily: "'Impact', sans-serif" }}>
                 {padNumber(timeLeft.seconds)}
               </div>
             </div>
