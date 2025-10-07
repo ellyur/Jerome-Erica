@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 import Navigation from '@/components/Navigation';
+import NewspaperHero from '@/components/NewspaperHero';
 import HeroSection from '@/components/HeroSection';
 import MusicConsentPopup from '@/components/MusicConsentPopup';
 import CountdownSection from '@/components/CountdownSection';
@@ -92,6 +93,7 @@ const Index = () => {
 
         {/* Main Content Sections */}
         <main className="relative z-10">
+          <NewspaperHero />
           <HeroSection />
           <CountdownSection />
           <VenueSection />
