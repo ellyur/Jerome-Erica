@@ -1,151 +1,111 @@
 import { motion } from 'framer-motion';
-import principalSponsorsImg from '@assets/principal sponsors_1759763680808.png';
+import { useAnimationContext } from '@/contexts/AnimationContext';
+
+import bouquetSponsorsImg from '@assets/boquet_1759741371019.png';
 import guestsImg from '@assets/guests_1759763680809.png';
 
 const DressCodeSection = () => {
+  const { animationsEnabled } = useAnimationContext();
+
   return (
     <motion.section 
       id="dresscode" 
-      className="section-pastel-blue py-20 px-4 relative overflow-hidden"
-      initial={{ opacity: 0 }}
+      className="section-pastel-blue py-20 px-4"
+      initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1, delay: 7.5 }}
+      transition={animationsEnabled ? { duration: 1, delay: 7.5 } : { duration: 0 }}
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-1/3 left-1/4 w-64 h-64 border border-primary/30 rounded-full"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-48 h-48 border border-primary/30 rounded-full"></div>
-      </div>
-      <div className="max-w-5xl mx-auto relative z-10">
-        {/* Section Header */}
-        <motion.div 
-          className="text-center mb-16 relative"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 7.8 }}
-        >
-          {/* Decorative Elements */}
-          <div className="absolute top-0 left-1/4 w-8 h-8 border-2 border-primary/30 rounded-full"></div>
-          <div className="absolute top-4 right-1/4 w-4 h-4 bg-primary/20 rounded-full"></div>
-          <div className="absolute bottom-0 left-1/3 w-6 h-6 border border-primary/40 rounded-full"></div>
-          <div className="absolute bottom-2 right-1/3 w-3 h-3 bg-primary/30 rounded-full"></div>
+      <div className="max-w-6xl mx-auto">
+        {/* Black Header Bar */}
+        <div className="text-center mb-12">
+          <div className="bg-foreground py-4 px-8 mb-8">
+            <h2 
+              className="text-3xl sm:text-4xl text-background"
+              data-testid="text-what-to-wear-title"
+            >
+              <span className="font-script italic">What to</span> WEAR?
+            </h2>
+          </div>
+        </div>
 
-          <h2 className="font-serif text-gold mb-8 text-5xl md:text-6xl font-bold tracking-wide" data-testid="text-dresscode-title">
-            Attire Guide
-          </h2>
-          <div className="bg-white/5 border border-primary/20 rounded-xl p-6 max-w-2xl mx-auto relative">
-            <div className="space-y-6">
-              <div>
-                <p className="text-xl font-serif font-bold text-foreground mb-3">
-                  Principal Sponsors
-                </p>
-                <div className="space-y-1">
-                  <p className="text-base text-foreground">
-                    <span className="font-semibold">Gentlemen:</span> Black Suit with Maroon Necktie
-                  </p>
-                  <p className="text-base text-foreground">
-                    <span className="font-semibold">Ladies:</span> Maroon Dress with Touch of Gold
-                  </p>
-                </div>
-              </div>
-              <div className="border-t border-primary/30 pt-4">
-                <p className="text-xl font-serif font-bold text-foreground mb-3">
-                  Guests
-                </p>
-                <div className="space-y-1">
-                  <p className="text-base text-foreground">
-                    <span className="font-semibold">Gentlemen:</span> Black Suit with Maroon Necktie
-                  </p>
-                  <p className="text-base text-foreground">
-                    <span className="font-semibold">Ladies:</span> Maroon Dress with Touch of Gold
-                  </p>
-                </div>
-              </div>
-              <div className="border-t border-primary/30 pt-4">
-                <p className="text-base text-foreground italic">
-                  We would love to see you dress according to our color palette.
-                </p>
-              </div>
+        {/* Intro Text */}
+        <p className="text-center text-sm sm:text-base mb-12" data-testid="text-dress-code-intro">
+          We would love to see you dress according to our color palette.
+        </p>
+
+        {/* Bouquet Sponsors Section */}
+        <motion.div 
+          className="mb-16"
+          initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 7.8 } : { duration: 0 }}
+        >
+          {/* Bouquet Sponsors Header */}
+          <div className="bg-foreground py-3 px-6 mb-6 max-w-md mx-auto">
+            <h3 className="text-xl sm:text-2xl text-background font-script italic text-center" data-testid="text-bouquet-sponsors">
+              Bouquet Sponsors
+            </h3>
+          </div>
+
+          {/* Dress Code Details */}
+          <div className="bg-muted/30 py-3 px-6 mb-6 max-w-2xl mx-auto">
+            <div className="text-center space-y-1">
+              <p className="text-sm sm:text-base" data-testid="text-gentlemen-bouquet">
+                <strong>Gentlemen:</strong> Black Suit with Maroon Necktie
+              </p>
+              <p className="text-sm sm:text-base" data-testid="text-ladies-bouquet">
+                <strong>Ladies:</strong> Maroon Dress with Touch of Gold
+              </p>
             </div>
+          </div>
+
+          {/* Bouquet Sponsors Illustration */}
+          <div className="max-w-lg mx-auto">
+            <img 
+              src={bouquetSponsorsImg}
+              alt="Bouquet Sponsors Attire" 
+              className="w-full h-auto"
+              data-testid="img-bouquet-sponsors"
+            />
           </div>
         </motion.div>
 
-        {/* Modern Dress Code Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {/* Principal Sponsors */}
-          <motion.div 
-            className="group"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 8.1 }}
-            whileHover={{ scale: 1.02 }}
-          >
-            <div className="bg-card/30 border border-border rounded-xl p-8 shadow-soft hover-elegant transition-all duration-500 h-full relative">
-              <div className="text-center">
-                <motion.div
-                  initial={{ scale: 0.8 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.6, delay: 8.3 }}
-                >
-                  <div className="mb-6 relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent rounded-2xl"></div>
-                    <h3 className="text-2xl font-body font-semibold text-foreground mb-4 relative z-10">
-                      FOR PRINCIPAL SPONSORS
-                    </h3>
-                    <div className="inline-block px-4 py-2 bg-primary/10 rounded-full">
-                      <span className="text-sm font-normal text-foreground">FORMAL ATTIRE</span>
-                    </div>
-                  </div>
-                </motion.div>
-                <motion.img 
-                  src={principalSponsorsImg}
-                  alt="Principal Sponsors attire guide"
-                  className="w-full max-w-md mx-auto object-contain rounded-2xl shadow-md group-hover:shadow-lg transition-shadow duration-300"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 8.5 }}
-                />
-              </div>
-            </div>
-          </motion.div>
+        {/* Guests Section */}
+        <motion.div 
+          className="mb-12"
+          initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 8.2 } : { duration: 0 }}
+        >
+          {/* Guests Header */}
+          <div className="bg-foreground py-3 px-6 mb-6 max-w-md mx-auto">
+            <h3 className="text-xl sm:text-2xl text-background font-script italic text-center" data-testid="text-guests">
+              Guests
+            </h3>
+          </div>
 
-          {/* Guests */}
-          <motion.div 
-            className="group"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 8.4 }}
-            whileHover={{ scale: 1.02 }}
-          >
-            <div className="bg-card/30 border border-border rounded-xl p-8 shadow-soft hover-elegant transition-all duration-500 h-full relative">
-              <div className="text-center">
-                <motion.div
-                  initial={{ scale: 0.8 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.6, delay: 8.6 }}
-                >
-                  <div className="mb-6 relative">
-                    <div className="absolute inset-0 bg-gradient-to-l from-primary/10 to-transparent rounded-2xl"></div>
-                    <h3 className="text-2xl font-body font-semibold text-foreground mb-4 relative z-10">
-                      FOR GUESTS
-                    </h3>
-                    <div className="inline-block px-4 py-2 bg-primary/10 rounded-full">
-                      <span className="text-sm font-normal text-foreground">ALL BLACK</span>
-                    </div>
-                  </div>
-                </motion.div>
-                <motion.img 
-                  src={guestsImg}
-                  alt="Guests attire guide"
-                  className="w-full max-w-md mx-auto object-contain rounded-2xl shadow-md group-hover:shadow-lg transition-shadow duration-300"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 8.8 }}
-                />
-              </div>
+          {/* Dress Code Details */}
+          <div className="bg-muted/30 py-3 px-6 mb-6 max-w-2xl mx-auto">
+            <div className="text-center">
+              <p className="text-sm sm:text-base font-bold" data-testid="text-guests-attire">
+                Formal Attire
+              </p>
+              <p className="text-sm sm:text-base" data-testid="text-guests-color">
+                All Black
+              </p>
             </div>
-          </motion.div>
-        </div>
+          </div>
+
+          {/* Guests Illustration */}
+          <div className="max-w-2xl mx-auto">
+            <img 
+              src={guestsImg}
+              alt="Guests Attire" 
+              className="w-full h-auto"
+              data-testid="img-guests-attire"
+            />
+          </div>
+        </motion.div>
       </div>
     </motion.section>
   );

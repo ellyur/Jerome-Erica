@@ -2,7 +2,9 @@ import { TypeAnimation } from 'react-type-animation';
 import { useState } from 'react';
 import { useAnimationContext } from '@/contexts/AnimationContext';
 
-import hero_section from "@assets/hero-section.jpg";
+import saveDate1 from "@assets/photo_2025-10-07_17-11-19_1759828380358.jpg";
+import saveDate2 from "@assets/photo_2025-10-07_17-11-21_1759828380357.jpg";
+import saveDate3 from "@assets/photo_2025-10-07_17-11-16_1759828380358.jpg";
 
 const HeroSection = () => {
   const [showElements, setShowElements] = useState(false);
@@ -12,185 +14,122 @@ const HeroSection = () => {
     <section 
       className="hero-section relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background"
     >
-      {/* Newspaper Header Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl w-full py-20">
-        {/* Names and Date Header */}
-        <div className="flex justify-between items-center mb-8 font-times">
-          <div className="text-left">
-            <p className="text-base sm:text-lg font-bold tracking-wider" data-testid="text-names">
-              JEROME & ERICKA
-            </p>
-          </div>
-          <div className="text-right">
-            <p className="text-base sm:text-lg font-bold tracking-wider" data-testid="text-date">
-              08.15.2026
-            </p>
-          </div>
+        {/* Header Bar with Hearts */}
+        <div className="mb-8 flex items-center justify-center gap-4">
+          <span className="text-2xl">♥ ♥ ♥</span>
+          <div className="flex-grow h-0.5 bg-foreground max-w-xs"></div>
+          <h2 className="text-xl sm:text-2xl tracking-widest font-bold" data-testid="text-save-the-date">
+            SAVE <span className="font-script italic">the</span> DATE
+          </h2>
+          <div className="flex-grow h-0.5 bg-foreground max-w-xs"></div>
+          <span className="text-2xl">♥ ♥ ♥</span>
         </div>
 
-        {/* Top Double Line */}
-        <div className="newspaper-double-line"></div>
+        {/* Photo Collage with Date */}
+        <div className={`transition-all duration-700 ${(animationsEnabled && showElements) || !animationsEnabled ? 'opacity-100' : 'opacity-0'}`}>
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto mb-8">
+            {/* Top Left - Photo 1 with border */}
+            <div className="border-4 border-foreground p-2 bg-background">
+              <img 
+                src={saveDate1}
+                alt="Wedding Photo 1" 
+                className="w-full h-auto"
+                data-testid="img-save-date-1"
+              />
+            </div>
 
-        {/* Ornamental Divider */}
-        <div className="ornamental-divider my-4">
-          <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10,25 Q20,15 30,25 T50,25 T70,25 Q80,35 90,25" fill="none" stroke="currentColor" strokeWidth="2"/>
-            <circle cx="50" cy="25" r="8" fill="currentColor"/>
-            <circle cx="20" cy="25" r="3" fill="currentColor"/>
-            <circle cx="80" cy="25" r="3" fill="currentColor"/>
-          </svg>
-        </div>
+            {/* Top Right - Large "08" */}
+            <div className="flex items-center justify-center">
+              <h1 
+                className="text-[120px] sm:text-[180px] md:text-[220px] leading-none font-bold"
+                style={{ fontFamily: "'Impact', sans-serif" }}
+                data-testid="text-date-08"
+              >
+                08
+              </h1>
+            </div>
 
-        {/* Main Title - Old English Style */}
-        <div className="mb-4">
-          <h1 
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-foreground tracking-wide leading-tight"
-            data-testid="text-main-invitation"
-            style={{ fontFamily: "'UnifrakturMaguntia', 'Old English Text MT', serif", fontWeight: 400 }}
-          >
+            {/* Bottom Left - Large "15" */}
+            <div className="flex items-center justify-center">
+              <h1 
+                className="text-[120px] sm:text-[180px] md:text-[220px] leading-none font-bold"
+                style={{ fontFamily: "'Impact', sans-serif" }}
+                data-testid="text-date-15"
+              >
+                15
+              </h1>
+            </div>
+
+            {/* Bottom Center - Photo 2 with border */}
+            <div className="border-4 border-foreground p-2 bg-background">
+              <img 
+                src={saveDate2}
+                alt="Wedding Photo 2" 
+                className="w-full h-auto"
+                data-testid="img-save-date-2"
+              />
+            </div>
+
+            {/* Bottom - Photo 3 with border */}
+            <div className="border-4 border-foreground p-2 bg-background col-span-2 sm:col-span-1">
+              <img 
+                src={saveDate3}
+                alt="Wedding Photo 3" 
+                className="w-full h-auto"
+                data-testid="img-save-date-3"
+              />
+            </div>
+
+            {/* Bottom Right - Large "26" */}
+            <div className="flex items-center justify-center">
+              <h1 
+                className="text-[120px] sm:text-[180px] md:text-[220px] leading-none font-bold"
+                style={{ fontFamily: "'Impact', sans-serif" }}
+                data-testid="text-date-26"
+              >
+                26
+              </h1>
+            </div>
+          </div>
+
+          {/* Invitation Text */}
+          <div className="mt-12 font-script italic text-2xl sm:text-3xl md:text-4xl" data-testid="text-invitation">
             {animationsEnabled ? (
               <TypeAnimation
                 sequence={[
-                  'The Newlywed Times',
+                  '',
+                  500,
+                  'See you on our wedding day!',
                   () => {
                     setShowElements(true);
                   }
                 ]}
-                wrapper="span"
-                speed={{ type: 'keyStrokeDelayInMs', value: 100 }}
-                style={{ 
-                  display: 'inline-block'
-                }}
+                wrapper="p"
+                speed={50}
                 cursor={true}
                 repeat={0}
-                className="typewriter-text"
               />
             ) : (
-              <span className="typewriter-text">
-                The Newlywed Times
-              </span>
+              <p>See you on our wedding day!</p>
             )}
-          </h1>
-        </div>
-
-        {/* Bottom Ornamental Divider */}
-        <div className="ornamental-divider my-4">
-          <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10,25 Q20,15 30,25 T50,25 T70,25 Q80,35 90,25" fill="none" stroke="currentColor" strokeWidth="2"/>
-            <circle cx="50" cy="25" r="8" fill="currentColor"/>
-            <circle cx="20" cy="25" r="3" fill="currentColor"/>
-            <circle cx="80" cy="25" r="3" fill="currentColor"/>
-          </svg>
-        </div>
-
-        {/* Bottom Double Line */}
-        <div className="newspaper-double-line mb-12"></div>
-
-        {/* Wedding Photo with Border */}
-        <div className={`transition-all duration-700 ${(animationsEnabled && showElements) ? 'animate-fade-up opacity-100' : (!animationsEnabled ? 'opacity-100' : 'opacity-0')}`}>
-          <div 
-            className="max-w-4xl mx-auto mb-8 border-4 border-foreground p-2 bg-background"
-          >
-            <img 
-              src={hero_section} 
-              alt="Wedding Photo" 
-              className="w-full h-auto"
-              style={{ filter: 'grayscale(100%) contrast(1.1)' }}
-            />
-          </div>
-
-          {/* Venue Information */}
-          <div className="bg-background border-2 border-foreground p-8 mb-10 max-w-2xl mx-auto">
-            <div className="space-y-4 font-times">
-              <div className="text-center">
-                <p className="text-xl sm:text-2xl font-bold tracking-wider mb-2" data-testid="text-venue">
-                  The Minor Basilica of Our Lady of the Rosary of Manaoag
-                </p>
-                <p className="text-lg sm:text-xl font-normal tracking-wide">
-                  Manaoag, Pangasinan
-                </p>
-                <p className="text-base sm:text-lg font-light tracking-wide mt-2">
-                  Friday, August 15, 2026
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          {/* RSVP Button */}
-          <div className={`transition-all duration-700 opacity-100 mt-8 ${animationsEnabled ? 'animate-fade-scale' : ''}`}>
-            <a href="https://jerome-ericka-rsvp.replit.app" target="_blank" rel="noopener noreferrer">
-              <button
-                className="newspaper-rsvp-btn"
-                aria-label="RSVP to Wedding"
-                data-testid="button-rsvp-hero"
-              >
-                RSVP NOW
-              </button>
-            </a>
           </div>
         </div>
-
       </div>
-      {/* Improved mobile responsiveness */}
+
       <style>{`
         .hero-section {
           min-height: 100vh !important;
         }
-        @media (min-width: 768px) {
-          .hero-section {
-            min-height: 100vh !important;
-          }
-        }
+        
         @media (max-width: 767px) {
           .hero-section {
             padding-top: 1rem;
             padding-bottom: 1rem;
-            min-height: 100vh !important;
           }
           .hero-section h1 {
-            font-size: 2.5rem !important;
-            line-height: 1.2 !important;
+            font-size: 80px !important;
           }
-        }
-
-        /* Newspaper RSVP Button */
-        .newspaper-rsvp-btn {
-          font-family: 'Times New Roman', serif;
-          font-weight: bold;
-          color: hsl(var(--foreground));
-          background-color: transparent;
-          padding: 1em 3em;
-          border: 3px solid hsl(var(--foreground));
-          border-radius: 0;
-          position: relative;
-          cursor: pointer;
-          overflow: hidden;
-          letter-spacing: 3px;
-          font-size: 1.1rem;
-          transition: all 0.3s ease;
-        }
-
-        .newspaper-rsvp-btn:hover {
-          background-color: hsl(var(--foreground));
-          color: hsl(var(--background));
-          transform: translateY(-2px);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Custom underscore cursor for TypeAnimation */
-        .typewriter-text .react-type-animation-cursor {
-          color: hsl(var(--foreground));
-          animation: blink 1.2s infinite;
-        }
-
-        .typewriter-text .react-type-animation-cursor::after {
-          content: '_';
-          font-weight: bold;
-        }
-
-        @keyframes blink {
-          0%, 50% { opacity: 1; }
-          51%, 100% { opacity: 0; }
         }
       `}</style>
     </section>

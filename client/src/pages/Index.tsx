@@ -2,20 +2,14 @@ import { useEffect, useRef, useState } from 'react';
 
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
-import ImageLoop from '@/components/ImageLoop';
 import MusicConsentPopup from '@/components/MusicConsentPopup';
 import CountdownSection from '@/components/CountdownSection';
-import StorySection from '@/components/StorySection';
-import ScrollTriggeredTimeline from '@/components/ScrollTriggeredTimeline';
 import VenueSection from '@/components/VenueSection';
 import DressCodeSection from '@/components/DressCodeSection';
 import HashtagGiftsSection from '@/components/HashtagGiftsSection';
-import RSVPSection from '@/components/RSVPSection';
 import HotelAccommodationSection from '@/components/HotelAccommodationSection';
 import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
-import CoverSection from '@/components/CoverSection';
-import InvitationRevealSection from '@/components/InvitationRevealSection';
 import MusicControl from '@/components/MusicControl';
 import { AnimationContext } from '@/contexts/AnimationContext';
 
@@ -99,28 +93,11 @@ const Index = () => {
         {/* Main Content Sections */}
         <main className="relative z-10">
           <HeroSection />
-          <InvitationRevealSection />
           <CountdownSection />
-          <ImageLoop />
-          <StorySection />
-          <CoverSection
-            imageUrl="/images/cover1_1759760761700.jpg"
-            alt="Family Wedding Cover Image 1"
-          />
-          <ScrollTriggeredTimeline />
           <VenueSection />
-          <CoverSection
-            imageUrl="/images/cover5_1759760761698.jpg"
-            alt="Couple Embracing Wedding Cover Image 2"
-          />
+          <HotelAccommodationSection />
           <DressCodeSection />
           <HashtagGiftsSection />
-          <RSVPSection />
-          <CoverSection
-            imageUrl="/images/cover3_1759760761697.jpg"
-            alt="Family Seated Wedding Cover Image 3"
-          />
-          <HotelAccommodationSection />
           <FAQSection />
           <Footer />
         </main>
