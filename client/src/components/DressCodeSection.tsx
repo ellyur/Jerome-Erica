@@ -6,6 +6,8 @@ import guestsImg from '@assets/guests_1759763680809.png';
 
 import principal_sponsors from "@assets/principal sponsors.png";
 
+import ps from "@assets/ps.png";
+
 const DressCodeSection = () => {
   const { animationsEnabled } = useAnimationContext();
 
@@ -62,7 +64,7 @@ const DressCodeSection = () => {
           {/* Bouquet Sponsors Illustration */}
           <div className="max-w-lg mx-auto">
             <img 
-              src={principal_sponsors}
+              src={ps}
               alt="Bouquet Sponsors Attire" 
               className="w-full h-auto"
               data-testid="img-bouquet-sponsors"
