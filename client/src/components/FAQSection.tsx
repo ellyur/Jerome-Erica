@@ -104,19 +104,23 @@ const FAQSection = () => {
           ))}
         </div>
 
-        {/* How do I RSVP Section - moved to bottom */}
+        {/* How do I RSVP Section - matching FAQ design */}
         <motion.div 
-          className="mb-16 text-center max-w-3xl mx-auto bg-muted/20 p-8 rounded-lg"
+          className="mb-16 max-w-4xl mx-auto"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 12.3 } : { duration: 0 }}
         >
-          <h3 className="text-xl sm:text-2xl font-bold mb-4 bg-muted/30 py-2" data-testid="text-rsvp-question">
-            HOW DO I RSVP?
-          </h3>
-          <p className="text-sm sm:text-base mb-4" data-testid="text-rsvp-answer">
-            To ensure an intimate and enjoyable experience for everyone, we have reserved seating for each guest individually. <span className="underline cursor-pointer">Click here</span> to confirm your attendance.
-          </p>
+          <div className="bg-foreground py-3 px-4 sm:px-6">
+            <h3 className="text-sm sm:text-base font-bold text-background" data-testid="text-rsvp-question">
+              HOW DO I RSVP?
+            </h3>
+          </div>
+          <div className="py-4 px-4 sm:px-6">
+            <p className="text-sm sm:text-base leading-relaxed" data-testid="text-rsvp-answer">
+              To ensure an intimate and enjoyable experience for everyone, we have reserved seating for each guest individually. <span className="underline cursor-pointer">Click here</span> to confirm your attendance.
+            </p>
+          </div>
         </motion.div>
 
         {/* Wedding Timeline */}
@@ -194,33 +198,7 @@ const FAQSection = () => {
             </div>
           </div>
 
-          {/* Closing Message */}
-          <motion.div 
-            className="mt-12 text-center max-w-3xl mx-auto px-4"
-            initial={animationsEnabled ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 12.8 } : { duration: 0 }}
-          >
-            <p className="text-sm sm:text-base leading-relaxed mb-4">
-              It's an honor to finally share our joy with you as we prepare to embark on our lifelong journey together.
-            </p>
-            <p className="text-sm sm:text-base leading-relaxed mb-4">
-              We've dreamt of this day, and now, with our hearts full of love and excitement, we can't wait to celebrate our marriage surrounded by the people who mean the most to us.
-            </p>
-            <p className="text-sm sm:text-base leading-relaxed mb-4">
-              Your presence would truly make our wedding complete, and we eagerly anticipate creating unforgettable memories with each of you.
-            </p>
-            <p className="text-sm sm:text-base leading-relaxed mb-4">
-              See you there!
-            </p>
-            <p className="text-sm sm:text-base leading-relaxed">
-              Love,
-            </p>
-            <p className="text-sm sm:text-base leading-relaxed font-bold">
-              Jerome & Ericka
-            </p>
           </motion.div>
-        </motion.div>
       </div>
     </motion.section>
   );

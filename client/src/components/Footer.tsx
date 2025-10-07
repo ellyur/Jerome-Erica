@@ -1,10 +1,10 @@
-import { Heart, Phone } from 'lucide-react';
+import { Heart } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
     <motion.footer 
-      className="bg-card text-foreground py-16 px-4 relative overflow-hidden"
+      className="bg-foreground text-background py-16 px-4 relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 12.5 }}
@@ -17,45 +17,48 @@ const Footer = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 12.8 }}
         >
-          {/* Couple Names */}
-          <div>
-            <h2 className="text-3xl sm:text-4xl mb-2 text-foreground" style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}>
-              Jerome
-              <span className="text-primary mx-3">&</span>
-              Ericka
-            </h2>
-            <p className="text-foreground text-lg">
-              August 15, 2026 • The Minor Basilica of Our Lady of the Rosary of Manaoag, Pangasinan
+          {/* Closing Message */}
+          <div className="max-w-3xl mx-auto space-y-4">
+            <p className="text-sm sm:text-base leading-relaxed">
+              It's an honor to finally share our joy with you as we prepare to embark on our lifelong journey together.
+            </p>
+            <p className="text-sm sm:text-base leading-relaxed">
+              We've dreamt of this day, and now, with our hearts full of love and excitement, we can't wait to celebrate our marriage surrounded by the people who mean the most to us.
+            </p>
+            <p className="text-sm sm:text-base leading-relaxed">
+              Your presence would truly make our wedding complete, and we eagerly anticipate creating unforgettable memories with each of you.
+            </p>
+            <p className="text-sm sm:text-base leading-relaxed">
+              See you there!
+            </p>
+            <p className="text-sm sm:text-base leading-relaxed mt-6">
+              Love,
+            </p>
+            <p className="text-sm sm:text-base leading-relaxed font-bold">
+              Jerome & Ericka
             </p>
           </div>
 
           {/* Decorative Elements */}
           <div className="flex justify-center items-center space-x-4 py-6">
-            <div className="w-16 h-px bg-border"></div>
-            <Heart className="w-6 h-6 text-primary animate-float" />
-            <div className="w-16 h-px bg-border"></div>
+            <div className="w-16 h-px bg-background"></div>
+            <Heart className="w-6 h-6 text-background animate-float" />
+            <div className="w-16 h-px bg-background"></div>
           </div>
 
-          {/* Thank You Message */}
-          <div className="max-w-2xl mx-auto">
-            <p className="text-foreground leading-relaxed italic">
-              We're grateful to have you as part of our story. You've made our journey more beautiful, and we can't wait to share our special day with you.
-            </p>
-          </div>
-
-          {/* Bottom Border */}
-          <div className="border-t border-border pt-8">
-            <p className="text-foreground text-sm">
-              With love and gratitude,
-            </p>
-            <p className="text-foreground" style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}>
-              Jerome & Ericka
+          {/* Couple Names & Date */}
+          <div>
+            <h2 className="text-3xl sm:text-4xl mb-2 text-background" style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}>
+              Jerome
+              <span className="text-background mx-3">&</span>
+              Ericka
+            </h2>
+            <p className="text-background text-lg">
+              August 15, 2026 • The Minor Basilica of Our Lady of the Rosary of Manaoag, Pangasinan
             </p>
           </div>
         </motion.div>
       </div>
-      {/* Background Decorative Elements */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-primary/20 to-transparent opacity-50 pointer-events-none"></div>
     </motion.footer>
   );
 };
