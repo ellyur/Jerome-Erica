@@ -152,7 +152,7 @@ const FAQSection = () => {
                         {event.time}
                       </p>
                     ) : (
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-background border-2 sm:border-4 border-foreground flex items-center justify-center z-10 p-2">
+                      <div className="w-32 h-32 sm:w-40 sm:h-40 bg-background border-2 sm:border-4 border-foreground flex items-center justify-center z-10 p-3">
                         <img src={event.image} alt={event.time} className="w-full h-full object-contain" />
                       </div>
                     )}
@@ -168,7 +168,7 @@ const FAQSection = () => {
                         {event.time}
                       </p>
                     ) : (
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-background border-2 sm:border-4 border-foreground flex items-center justify-center z-10 p-2">
+                      <div className="w-32 h-32 sm:w-40 sm:h-40 bg-background border-2 sm:border-4 border-foreground flex items-center justify-center z-10 p-3">
                         <img src={event.image} alt={event.time} className="w-full h-full object-contain" />
                       </div>
                     )}
