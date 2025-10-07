@@ -37,16 +37,12 @@ const HashtagGiftsSection = () => {
           </div>
 
           {/* Gift Message */}
-          <div className="max-w-2xl mx-auto border-t-2 border-b-2 border-foreground py-6 mb-8">
+          <div className="max-w-2xl mx-auto border-t-2 border-b-2 border-foreground py-6 mb-8 px-4">
             <p 
               className="text-sm sm:text-base leading-relaxed italic"
               data-testid="text-gifts-message"
             >
-              With all that we have, we've been truly blessed. Your presence
-              <br />
-              and prayers are all that we request. But if you desire to give
-              <br />
-              nonetheless, monetary gift is one we humbly request.
+              With all that we have, we've been truly blessed. Your presence and prayers are all that we request. But if you desire to give nonetheless, monetary gift is one we humbly request.
             </p>
           </div>
         </motion.div>
@@ -74,20 +70,18 @@ const HashtagGiftsSection = () => {
           </div>
 
           {/* Description */}
-          <div className="max-w-2xl mx-auto border-t-2 border-b-2 border-foreground py-6 mb-4">
+          <div className="max-w-2xl mx-auto border-t-2 border-b-2 border-foreground py-6 mb-4 px-4">
             <p 
               className="text-sm sm:text-base leading-relaxed"
               data-testid="text-capture-description"
             >
-              Capture the love after our unplugged ceremony!
-              <br />
-              Share you wedding photos using our official wedding hashtag
+              Capture the love after our unplugged ceremony! Share you wedding photos using our official wedding hashtag
             </p>
           </div>
 
           {/* Hashtag */}
           <p 
-            className="text-xl sm:text-2xl font-bold tracking-wider"
+            className="text-lg sm:text-xl md:text-2xl font-bold tracking-wide sm:tracking-wider break-words px-4"
             data-testid="text-hashtag"
           >
             #UnbERICKAbleLoveWithJEROME
