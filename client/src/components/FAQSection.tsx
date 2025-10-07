@@ -140,7 +140,7 @@ const FAQSection = () => {
             </h2>
           </div>
 
-          <p className="text-center text-sm sm:text-base mb-12" data-testid="text-timeline-intro">
+          <p className="text-center text-sm sm:text-base mb-12 ml-[1px] mr-[1px]" data-testid="text-timeline-intro">
             Here's how it's gonna go down
           </p>
 
