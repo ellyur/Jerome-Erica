@@ -8,6 +8,8 @@ import our_love_story from "@assets/our-love-story.jpg";
 
 import lovestory_bottom from "@assets/lovestory-bottom.jpg";
 
+import lovestory_bottom1 from "@assets/lovestory-bottom1.jpg";
+
 const CountdownSection = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -176,7 +178,7 @@ const CountdownSection = () => {
               {/* Photo 2 */}
               <div className="border-4 border-foreground p-2 bg-background">
                 <img 
-                  src={familyPhoto}
+                  src={lovestory_bottom1}
                   alt="Family Photo 2" 
                   className="w-full h-auto"
                   data-testid="img-story-photo-2"
