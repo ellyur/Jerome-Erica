@@ -44,9 +44,7 @@ const DressCodeSection = () => {
         >
           {/* Bouquet Sponsors Header */}
           <div className="bg-foreground py-3 px-6 mb-6 max-w-md mx-auto">
-            <h3 className="text-xl sm:text-2xl text-background font-script italic text-center" data-testid="text-bouquet-sponsors">
-              Bouquet Sponsors
-            </h3>
+            <h3 className="text-xl sm:text-2xl text-background font-script italic text-center" data-testid="text-bouquet-sponsors">Principal Sponsors</h3>
           </div>
 
           {/* Dress Code Details */}
