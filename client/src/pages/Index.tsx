@@ -9,6 +9,7 @@ import VenueSection from '@/components/VenueSection';
 import DressCodeSection from '@/components/DressCodeSection';
 import HashtagGiftsSection from '@/components/HashtagGiftsSection';
 import HotelAccommodationSection from '@/components/HotelAccommodationSection';
+import RSVPSection from '@/components/RSVPSection';
 import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
 import MusicControl from '@/components/MusicControl';
@@ -98,6 +99,7 @@ const Index = () => {
           <CountdownSection />
           <VenueSection />
           <HotelAccommodationSection />
+          <RSVPSection />
           <DressCodeSection />
           <HashtagGiftsSection />
           <FAQSection />

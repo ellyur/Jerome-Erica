@@ -13,10 +13,10 @@ const Navigation = () => {
     { name: 'Our Story', href: '#story' },
     { name: 'Timeline', href: '#timeline' },
     { name: 'Venue', href: '#venue' },
+    { name: 'Hotel', href: '#hotel-accommodation' },
+    { name: 'RSVP', href: '#rsvp' },
     { name: 'Dress Code', href: '#dresscode' },
     { name: 'Hashtag & Gifts', href: '#hashtag-gifts' },
-    { name: 'RSVP', href: 'https://jerome-ericka-rsvp.replit.app', external: true },
-    { name: 'Hotel', href: '#hotel-accommodation' },
     { name: 'FAQ', href: '#faq' }
   ];
 
