@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import { useAnimationContext } from '@/contexts/AnimationContext';
 
-import deluxeDoubleRoom from '@assets/image_1759767327319.png';
-import deluxeKingRoom from '@assets/image_1759767340119.png';
-import executiveSuite from '@assets/image_1759767351462.png';
+import deluxeKingRoom from '@assets/deluxe-single_1759831717446.png';
+import deluxeDoubleRoom from '@assets/deluxe-doublebed_1759831717447.png';
+import executiveSuite from '@assets/executive_1759831717446.png';
 
 const HotelAccommodationSection = () => {
   const { animationsEnabled } = useAnimationContext();
