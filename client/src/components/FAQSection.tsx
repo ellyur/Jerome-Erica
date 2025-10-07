@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useAnimationContext } from '@/contexts/AnimationContext';
-import { Heart, Bell, Camera, Home, Utensils, PartyPopper, CameraIcon } from 'lucide-react';
+import { Heart, Bell, Camera, Home, Utensils, PartyPopper } from 'lucide-react';
 
 const FAQSection = () => {
   const { animationsEnabled } = useAnimationContext();
@@ -36,36 +36,15 @@ const FAQSection = () => {
   return (
     <motion.section 
       id="faq"
-      className="section-pastel-blue py-20 px-4"
+      className="section-pastel-blue py-12 px-4"
       initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
       animate={{ opacity: 1 }}
       transition={animationsEnabled ? { duration: 1, delay: 11.5 } : { duration: 0 }}
     >
       <div className="max-w-6xl mx-auto">
-        {/* Camera Icon Section */}
-        <motion.div 
-          className="mb-12 text-center"
-          initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 11.5 } : { duration: 0 }}
-        >
-          <div className="flex justify-center mb-4">
-            <Camera className="w-16 h-16 sm:w-20 sm:h-20 text-foreground" strokeWidth={1.5} />
-          </div>
-          <p className="text-sm sm:text-base leading-relaxed italic mb-2">
-            Capture the love after our unplugged ceremony!
-          </p>
-          <p className="text-sm sm:text-base leading-relaxed mb-2">
-            Share you wedding photos using our official wedding hashtag
-          </p>
-          <p className="text-base sm:text-lg font-bold">
-            #UnbERICKAbleLoveWithJEROME
-          </p>
-        </motion.div>
-
         {/* Frequently Asked Questions Header */}
         <motion.div 
-          className="mb-12"
+          className="mb-8"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 11.7 } : { duration: 0 }}
