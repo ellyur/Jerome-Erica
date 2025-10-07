@@ -36,7 +36,7 @@ const HeroSection = () => {
         <div className={`transition-all duration-700 ${(animationsEnabled && showElements) || !animationsEnabled ? 'opacity-100' : 'opacity-0'}`}>
           <div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto mb-8">
             {/* Top Left - Photo 1 with border */}
-            <div className="border-4 border-foreground p-2 bg-background h-[250px] sm:h-[350px] md:h-[400px]">
+            <div className="border-4 border-foreground p-2 bg-background h-[200px] sm:h-[350px] md:h-[400px]">
               <img 
                 src={save_the_date_08}
                 alt="Wedding Photo 1" 
@@ -46,9 +46,9 @@ const HeroSection = () => {
             </div>
 
             {/* Top Right - Large "08" */}
-            <div className="flex items-center justify-center h-[250px] sm:h-[350px] md:h-[400px]">
+            <div className="flex items-center justify-center h-[200px] sm:h-[350px] md:h-[400px]">
               <h1 
-                className="text-[120px] sm:text-[180px] md:text-[220px] leading-none font-bold"
+                className="text-[80px] sm:text-[180px] md:text-[220px] leading-none font-bold"
                 style={{ fontFamily: "'Impact', sans-serif" }}
                 data-testid="text-date-08"
               >
@@ -57,9 +57,9 @@ const HeroSection = () => {
             </div>
 
             {/* Bottom Left - Large "15" */}
-            <div className="flex items-center justify-center h-[250px] sm:h-[350px] md:h-[400px]">
+            <div className="flex items-center justify-center h-[200px] sm:h-[350px] md:h-[400px]">
               <h1 
-                className="text-[120px] sm:text-[180px] md:text-[220px] leading-none font-bold"
+                className="text-[80px] sm:text-[180px] md:text-[220px] leading-none font-bold"
                 style={{ fontFamily: "'Impact', sans-serif" }}
                 data-testid="text-date-15"
               >
@@ -68,7 +68,7 @@ const HeroSection = () => {
             </div>
 
             {/* Bottom Center - Photo 2 with border */}
-            <div className="border-4 border-foreground p-2 bg-background h-[250px] sm:h-[350px] md:h-[400px]">
+            <div className="border-4 border-foreground p-2 bg-background h-[200px] sm:h-[350px] md:h-[400px]">
               <img 
                 src={save_the_date_15}
                 alt="Wedding Photo 2" 
@@ -78,7 +78,7 @@ const HeroSection = () => {
             </div>
 
             {/* Bottom - Photo 3 with border */}
-            <div className="border-4 border-foreground p-2 bg-background col-span-2 sm:col-span-1 h-[250px] sm:h-[350px] md:h-[400px]">
+            <div className="border-4 border-foreground p-2 bg-background h-[200px] sm:h-[350px] md:h-[400px]">
               <img 
                 src={save_the_date_26}
                 alt="Wedding Photo 3" 
@@ -88,9 +88,9 @@ const HeroSection = () => {
             </div>
 
             {/* Bottom Right - Large "26" */}
-            <div className="flex items-center justify-center h-[250px] sm:h-[350px] md:h-[400px]">
+            <div className="flex items-center justify-center h-[200px] sm:h-[350px] md:h-[400px]">
               <h1 
-                className="text-[120px] sm:text-[180px] md:text-[220px] leading-none font-bold"
+                className="text-[80px] sm:text-[180px] md:text-[220px] leading-none font-bold"
                 style={{ fontFamily: "'Impact', sans-serif" }}
                 data-testid="text-date-26"
               >
