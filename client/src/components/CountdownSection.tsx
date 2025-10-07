@@ -164,7 +164,7 @@ const CountdownSection = () => {
 
           {/* Family Photos Grid */}
           <div className="max-w-4xl mx-auto mt-8 px-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6">
               {/* Photo 1 */}
               <div className="border-4 border-foreground p-2 bg-background">
                 <img 
