@@ -8,6 +8,8 @@ import principal_sponsors from "@assets/principal sponsors.png";
 
 import ps from "@assets/ps.png";
 
+import g from "@assets/g.png";
+
 const DressCodeSection = () => {
   const { animationsEnabled } = useAnimationContext();
 
@@ -101,7 +103,7 @@ const DressCodeSection = () => {
           {/* Guests Illustration */}
           <div className="max-w-2xl mx-auto">
             <img 
-              src={guestsImg}
+              src={g}
               alt="Guests Attire" 
               className="w-full h-auto"
               data-testid="img-guests-attire"
