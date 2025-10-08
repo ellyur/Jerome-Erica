@@ -74,9 +74,7 @@ const HashtagGiftsSection = () => {
             <p 
               className="text-sm sm:text-base leading-relaxed"
               data-testid="text-capture-description"
-            >
-              Capture the love after our unplugged ceremony! Share you wedding photos using our official wedding hashtag
-            </p>
+            >Capture the love after our unplugged ceremony! Share your wedding photos using our official wedding hashtag</p>
           </div>
 
           {/* Hashtag */}
