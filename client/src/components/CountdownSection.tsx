@@ -50,7 +50,7 @@ const CountdownSection = () => {
       className="section-pastel-blue py-4 px-4 relative z-0"
       initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
+      viewport={{ once: false }}
       transition={animationsEnabled ? { duration: 0.6 } : { duration: 0 }}
     >
       <div className="max-w-5xl mx-auto text-center relative z-0">
@@ -59,7 +59,7 @@ const CountdownSection = () => {
           className="mb-8"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={animationsEnabled ? { duration: 0.6, ease: "easeOut" } : { duration: 0 }}
         >
           <p className="text-base sm:text-lg font-bold mb-2" data-testid="text-announcement">
@@ -75,7 +75,7 @@ const CountdownSection = () => {
           className="mb-8"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={animationsEnabled ? { duration: 0.6, ease: "easeOut", delay: 0.1 } : { duration: 0 }}
         >
           <p className="text-2xl sm:text-3xl font-bold tracking-wider mb-1" data-testid="text-wedding-date">
@@ -91,7 +91,7 @@ const CountdownSection = () => {
           className="border-4 border-foreground px-4 sm:px-8 py-4 sm:py-6 mb-12 bg-background mx-auto max-w-full"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={animationsEnabled ? { duration: 0.6, ease: "easeOut", delay: 0.2 } : { duration: 0 }}
         >
           <div className="flex gap-2 sm:gap-6 md:gap-8 items-center justify-center">
@@ -129,7 +129,7 @@ const CountdownSection = () => {
           className="mt-16"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={animationsEnabled ? { duration: 0.8, ease: "easeOut" } : { duration: 0 }}
         >
           <h2 className="text-4xl sm:text-5xl mb-8" data-testid="text-our-story">

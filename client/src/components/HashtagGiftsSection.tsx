@@ -12,7 +12,7 @@ const HashtagGiftsSection = () => {
       className="section-pastel-blue py-4 px-4"
       initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
+      viewport={{ once: false }}
       transition={animationsEnabled ? { duration: 0.6 } : { duration: 0 }}
     >
       <div className="max-w-5xl mx-auto space-y-16">
@@ -21,7 +21,7 @@ const HashtagGiftsSection = () => {
           className="text-center"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={animationsEnabled ? { duration: 0.6, ease: "easeOut" } : { duration: 0 }}
         >
           {/* Black Header Bar */}
@@ -55,7 +55,7 @@ const HashtagGiftsSection = () => {
           className="text-center"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={animationsEnabled ? { duration: 0.6, ease: "easeOut", delay: 0.2 } : { duration: 0 }}
         >
           {/* Black Header Bar */}

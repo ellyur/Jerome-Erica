@@ -45,7 +45,7 @@ const FAQSection = () => {
       className="section-pastel-blue py-4 px-4"
       initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
+      viewport={{ once: false }}
       transition={animationsEnabled ? { duration: 0.6 } : { duration: 0 }}
     >
       <div className="max-w-6xl mx-auto">
@@ -54,7 +54,7 @@ const FAQSection = () => {
           className="mb-8"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={animationsEnabled ? { duration: 0.6, ease: "easeOut" } : { duration: 0 }}
         >
           <div className="bg-foreground py-4 px-8 text-center">
@@ -74,7 +74,7 @@ const FAQSection = () => {
               key={index}
               initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={animationsEnabled ? { duration: 0.6, ease: "easeOut", delay: index * 0.1 } : { duration: 0 }}
               data-testid={`faq-item-${index}`}
             >
@@ -97,7 +97,7 @@ const FAQSection = () => {
           className="mb-16 max-w-4xl mx-auto"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={animationsEnabled ? { duration: 0.6, ease: "easeOut" } : { duration: 0 }}
         >
           <div className="bg-foreground py-3 px-4 sm:px-6">
@@ -117,7 +117,7 @@ const FAQSection = () => {
           className="mb-16"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={animationsEnabled ? { duration: 0.6, ease: "easeOut" } : { duration: 0 }}
         >
           {/* Black Header Bar */}
@@ -147,7 +147,7 @@ const FAQSection = () => {
                   className="flex items-center justify-center gap-4 md:gap-8 relative"
                   initial={animationsEnabled ? { opacity: 0, x: index % 2 === 0 ? -30 : 30 } : { opacity: 1, x: 0 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false }}
                   transition={animationsEnabled ? { duration: 0.6, delay: index * 0.1 } : { duration: 0 }}
                   data-testid={`timeline-event-${index}`}
                 >

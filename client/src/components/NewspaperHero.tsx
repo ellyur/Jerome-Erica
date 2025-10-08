@@ -16,7 +16,7 @@ const NewspaperHero = () => {
       style={{ backgroundColor: '#f5f1e8' }}
       initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
+      viewport={{ once: false }}
       transition={animationsEnabled ? { duration: 0.6 } : { duration: 0 }}
     >
       <div className="relative z-10 max-w-5xl w-full" style={{ color: '#1c1c1c' }}>
@@ -25,7 +25,7 @@ const NewspaperHero = () => {
           className="mb-8"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={animationsEnabled ? { duration: 0.6, ease: "easeOut" } : { duration: 0 }}
         >
           <img 
@@ -42,7 +42,7 @@ const NewspaperHero = () => {
           style={{ border: '3px solid #1c1c1c', padding: '8px', backgroundColor: '#f5f1e8' }}
           initial={animationsEnabled ? { opacity: 0, scale: 0.95 } : { opacity: 1, scale: 1 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={animationsEnabled ? { duration: 0.6, ease: "easeOut", delay: 0.1 } : { duration: 0 }}
         >
           <div style={{ border: '1px solid #1c1c1c', padding: '4px' }}>
@@ -68,7 +68,7 @@ const NewspaperHero = () => {
           data-testid="text-couple-names-main"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={animationsEnabled ? { duration: 0.6, ease: "easeOut", delay: 0.2 } : { duration: 0 }}
         >
           JEROME <span style={{ fontFamily: "'Times New Roman', serif", fontWeight: 400 }}>&</span> ERICKA
@@ -86,7 +86,7 @@ const NewspaperHero = () => {
           data-testid="text-getting-married"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={animationsEnabled ? { duration: 0.6, ease: "easeOut", delay: 0.3 } : { duration: 0 }}
         >
           ARE GETTING MARRIED!
@@ -98,7 +98,7 @@ const NewspaperHero = () => {
           style={{ borderTop: '1px solid #1c1c1c' }}
           initial={animationsEnabled ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
           whileInView={{ opacity: 1, scaleX: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={animationsEnabled ? { duration: 0.5, ease: "easeOut", delay: 0.4 } : { duration: 0 }}
         ></motion.div>
 
@@ -113,7 +113,7 @@ const NewspaperHero = () => {
           data-testid="text-celebration-message"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={animationsEnabled ? { duration: 0.6, ease: "easeOut", delay: 0.5 } : { duration: 0 }}
         >
           JOIN US IN CELEBRATING A UNION OF LOVE, LAUGHTER, AND HAPPINESS
@@ -124,7 +124,7 @@ const NewspaperHero = () => {
           className="max-w-2xl mx-auto mb-8 text-center"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={animationsEnabled ? { duration: 0.6, ease: "easeOut", delay: 0.6 } : { duration: 0 }}
         >
           <p 
@@ -156,7 +156,7 @@ const NewspaperHero = () => {
           className="max-w-3xl mx-auto mb-8 text-right px-4"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={animationsEnabled ? { duration: 0.6, ease: "easeOut", delay: 0.7 } : { duration: 0 }}
         >
           <p 
@@ -178,7 +178,7 @@ const NewspaperHero = () => {
           style={{ borderTop: '2px solid #1c1c1c', borderBottom: '2px solid #1c1c1c', padding: '6px 0' }}
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={animationsEnabled ? { duration: 0.6, ease: "easeOut", delay: 0.8 } : { duration: 0 }}
         >
           <div className="flex justify-center items-center gap-4 text-xs sm:text-sm uppercase" style={{ fontWeight: 700, letterSpacing: '0.1em' }}>

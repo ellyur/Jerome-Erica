@@ -12,7 +12,7 @@ const RSVPSection = () => {
       className="section-pastel-blue py-4 px-4"
       initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
+      viewport={{ once: false }}
       transition={animationsEnabled ? { duration: 0.6 } : { duration: 0 }}
     >
       <div className="max-w-6xl mx-auto">
