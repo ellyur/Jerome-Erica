@@ -1,6 +1,9 @@
 import heroPhoto from "@assets/photo_2025-10-07_17-37-04_1759829841162.jpg";
 
 import hero_section from "@assets/hero-section.jpg";
+import newlywedTimesHeader from "@assets/image_1759911805962.png";
+
+import head from "@assets/head.png";
 
 const NewspaperHero = () => {
   return (
@@ -9,54 +12,14 @@ const NewspaperHero = () => {
       style={{ backgroundColor: '#f5f1e8' }}
     >
       <div className="relative z-10 max-w-5xl w-full" style={{ color: '#1c1c1c' }}>
-        {/* Top Header Bar */}
-        <div className="flex justify-between items-center mb-3 text-xs sm:text-sm uppercase" data-testid="header-bar" style={{ fontWeight: 500, letterSpacing: '0.1em' }}>
-          <span data-testid="text-couple-names-header">JEROME & ERICKA</span>
-          <span data-testid="text-wedding-date-header">08.15.2026</span>
-        </div>
-
-        {/* Decorative Double Line */}
-        <div className="mb-4" style={{ borderTop: '2px solid #1c1c1c', borderBottom: '2px solid #1c1c1c', padding: '2px 0' }}>
-          <div style={{ height: '1px', backgroundColor: '#1c1c1c' }}></div>
-        </div>
-
-        {/* The Newlywed Times Title with Ornaments */}
-        <div className="text-center mb-4">
-          {/* Top Ornament */}
-          <div className="flex items-center justify-center mb-3">
-            <svg className="w-24 h-10 sm:w-32 sm:h-12" viewBox="0 0 120 40" fill="none">
-              <path d="M5 20 C 20 8, 40 8, 60 20 S 100 32, 115 20" stroke="#1c1c1c" strokeWidth="1.5" fill="none"/>
-              <path d="M10 25 C 25 15, 45 15, 60 25 S 95 35, 110 25" stroke="#1c1c1c" strokeWidth="1" fill="none"/>
-              <circle cx="60" cy="20" r="3" fill="#1c1c1c"/>
-            </svg>
-          </div>
-          
-          <h1 
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-3"
-            style={{ 
-              fontFamily: "'UnifrakturMaguntia', 'Old English Text MT', serif",
-              fontWeight: 900,
-              letterSpacing: '-0.02em',
-              lineHeight: 1
-            }}
-            data-testid="text-newspaper-title"
-          >
-            The Newlywed Times
-          </h1>
-
-          {/* Bottom Ornament */}
-          <div className="flex items-center justify-center">
-            <svg className="w-24 h-10 sm:w-32 sm:h-12" viewBox="0 0 120 40" fill="none">
-              <path d="M5 20 C 20 32, 40 32, 60 20 S 100 8, 115 20" stroke="#1c1c1c" strokeWidth="1.5" fill="none"/>
-              <path d="M10 15 C 25 25, 45 25, 60 15 S 95 5, 110 15" stroke="#1c1c1c" strokeWidth="1" fill="none"/>
-              <circle cx="60" cy="20" r="3" fill="#1c1c1c"/>
-            </svg>
-          </div>
-        </div>
-
-        {/* Decorative Double Line */}
-        <div className="mb-8" style={{ borderTop: '2px solid #1c1c1c', borderBottom: '2px solid #1c1c1c', padding: '2px 0' }}>
-          <div style={{ height: '1px', backgroundColor: '#1c1c1c' }}></div>
+        {/* The Newlywed Times Header Image */}
+        <div className="mb-8">
+          <img 
+            src={head}
+            alt="The Newlywed Times - Jerome & Ericka - 08.15.2026" 
+            className="w-full h-auto"
+            data-testid="img-newspaper-header"
+          />
         </div>
 
         {/* Main Photo with Double Border */}
