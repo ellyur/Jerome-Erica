@@ -20,7 +20,7 @@ const HeroSection = () => {
     <section 
       className="hero-section relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background"
     >
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl w-full py-20">
+      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl w-full py-20 mt-[-93px] mb-[-93px] pt-[15px] pb-[15px]">
         {/* Header Bar with Hearts */}
         <div className="mb-8 flex items-center justify-center gap-4">
           <span className="text-2xl">♥ ♥ ♥</span>
