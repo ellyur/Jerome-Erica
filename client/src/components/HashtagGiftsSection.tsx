@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Camera, Gift } from 'lucide-react';
 import { useAnimationContext } from '@/contexts/AnimationContext';
+import { TypeAnimation } from 'react-type-animation';
 
 const HashtagGiftsSection = () => {
   const { animationsEnabled } = useAnimationContext();
@@ -78,12 +79,27 @@ const HashtagGiftsSection = () => {
           </div>
 
           {/* Hashtag */}
-          <p 
+          <div 
             className="text-lg sm:text-xl md:text-2xl font-bold tracking-wide sm:tracking-wider break-words px-4"
             data-testid="text-hashtag"
           >
-            #UnbERICKAbleLoveWithJEROME
-          </p>
+            {animationsEnabled ? (
+              <TypeAnimation
+                sequence={[
+                  '#UnbERICKAbleLoveWithJEROME',
+                  5000,
+                  '',
+                  0,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+                cursor={true}
+              />
+            ) : (
+              '#UnbERICKAbleLoveWithJEROME'
+            )}
+          </div>
         </motion.div>
       </div>
     </motion.section>
