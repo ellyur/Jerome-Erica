@@ -34,9 +34,6 @@ const Footer = () => {
             <p className="text-sm sm:text-base leading-relaxed mt-6">
               Love,
             </p>
-            <p className="text-sm sm:text-base leading-relaxed font-bold">
-              Jerome & Ericka
-            </p>
           </div>
 
           {/* Decorative Elements */}
