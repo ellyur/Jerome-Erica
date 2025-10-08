@@ -12,6 +12,7 @@ const NewspaperHero = () => {
 
   return (
     <motion.section 
+      id="hero"
       className="newspaper-hero relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-8 px-4"
       style={{ backgroundColor: '#f5f1e8' }}
       initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}

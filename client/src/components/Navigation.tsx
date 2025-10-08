@@ -8,13 +8,16 @@ const Navigation = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const navItems: Array<{ name: string; href: string; external?: boolean }> = [
+    { name: 'Hero', href: '#hero' },
     { name: 'Countdown', href: '#countdown' },
     { name: 'Venue', href: '#venue' },
     { name: 'Hotel', href: '#hotel-accommodation' },
     { name: 'RSVP', href: '#rsvp' },
     { name: 'Dress Code', href: '#dresscode' },
     { name: 'Hashtag & Gifts', href: '#hashtag-gifts' },
-    { name: 'FAQ', href: '#faq' }
+    { name: 'FAQ', href: '#faq' },
+    { name: 'Timeline', href: '#timeline' },
+    { name: 'Footer', href: '#footer' }
   ];
 
   useEffect(() => {

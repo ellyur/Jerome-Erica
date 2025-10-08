@@ -114,6 +114,7 @@ const FAQSection = () => {
 
         {/* Wedding Timeline */}
         <motion.div 
+          id="timeline"
           className="mb-16"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}

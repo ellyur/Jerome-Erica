@@ -7,6 +7,7 @@ const Footer = () => {
 
   return (
     <motion.footer 
+      id="footer"
       className="bg-foreground text-background py-16 px-4 relative overflow-hidden"
       initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
       whileInView={{ opacity: 1 }}
