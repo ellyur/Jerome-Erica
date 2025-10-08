@@ -8,10 +8,7 @@ const Navigation = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const navItems: Array<{ name: string; href: string; external?: boolean }> = [
-    { name: 'Our Moments', href: '#slideshow' },
     { name: 'Countdown', href: '#countdown' },
-    { name: 'Our Story', href: '#story' },
-    { name: 'Timeline', href: '#timeline' },
     { name: 'Venue', href: '#venue' },
     { name: 'Hotel', href: '#hotel-accommodation' },
     { name: 'RSVP', href: '#rsvp' },
