@@ -128,8 +128,9 @@ const CountdownSection = () => {
         <motion.div 
           className="mt-16"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 0.9 } : { duration: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut" } : { duration: 0 }}
         >
           <h2 className="text-4xl sm:text-5xl mb-8" data-testid="text-our-story">
             OUR <span className="font-script italic">Story</span>
