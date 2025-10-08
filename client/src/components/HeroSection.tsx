@@ -41,6 +41,7 @@ const HeroSection = () => {
                 src={save_the_date_08}
                 alt="Wedding Photo 1" 
                 className="w-full h-full object-contain"
+                style={{ filter: 'grayscale(100%)' }}
                 data-testid="img-save-date-1"
               />
             </div>
@@ -73,6 +74,7 @@ const HeroSection = () => {
                 src={save_the_date_15}
                 alt="Wedding Photo 2" 
                 className="w-full h-full object-contain"
+                style={{ filter: 'grayscale(100%)' }}
                 data-testid="img-save-date-2"
               />
             </div>
@@ -83,6 +85,7 @@ const HeroSection = () => {
                 src={save_the_date_26}
                 alt="Wedding Photo 3" 
                 className="w-full h-full object-contain"
+                style={{ filter: 'grayscale(100%)' }}
                 data-testid="img-save-date-3"
               />
             </div>
