@@ -16,7 +16,7 @@ const DressCodeSection = () => {
   return (
     <motion.section 
       id="dresscode" 
-      className="section-pastel-blue py-20 px-4"
+      className="section-pastel-blue py-4 px-4"
       initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
       animate={{ opacity: 1 }}
       transition={animationsEnabled ? { duration: 1, delay: 7.5 } : { duration: 0 }}

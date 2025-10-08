@@ -8,7 +8,7 @@ import head from "@assets/head.png";
 const NewspaperHero = () => {
   return (
     <section 
-      className="newspaper-hero relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-20 px-4"
+      className="newspaper-hero relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-8 px-4"
       style={{ backgroundColor: '#f5f1e8' }}
     >
       <div className="relative z-10 max-w-5xl w-full" style={{ color: '#1c1c1c' }}>
