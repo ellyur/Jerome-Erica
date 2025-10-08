@@ -11,16 +11,18 @@ const HashtagGiftsSection = () => {
       id="hashtag-gifts" 
       className="section-pastel-blue py-4 px-4"
       initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
-      animate={{ opacity: 1 }}
-      transition={animationsEnabled ? { duration: 1, delay: 0.3 } : { duration: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={animationsEnabled ? { duration: 0.6 } : { duration: 0 }}
     >
       <div className="max-w-5xl mx-auto space-y-16">
         {/* Gift Guide Section */}
         <motion.div 
           className="text-center"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 0.5 } : { duration: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={animationsEnabled ? { duration: 0.6, ease: "easeOut" } : { duration: 0 }}
         >
           {/* Black Header Bar */}
           <div className="bg-foreground py-4 px-8 mb-8">
@@ -52,8 +54,9 @@ const HashtagGiftsSection = () => {
         <motion.div 
           className="text-center"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 0.7 } : { duration: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={animationsEnabled ? { duration: 0.6, ease: "easeOut", delay: 0.2 } : { duration: 0 }}
         >
           {/* Black Header Bar */}
           <div className="bg-foreground py-4 px-8 mb-8">

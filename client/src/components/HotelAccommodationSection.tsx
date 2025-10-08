@@ -34,8 +34,9 @@ const HotelAccommodationSection = () => {
       id="hotel-accommodation" 
       className="section-pastel-blue py-4 px-4"
       initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
-      animate={{ opacity: 1 }}
-      transition={animationsEnabled ? { duration: 1, delay: 9.5 } : { duration: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={animationsEnabled ? { duration: 0.6 } : { duration: 0 }}
     >
       <div className="max-w-6xl mx-auto">
         {/* Black Header Bar */}
@@ -66,8 +67,9 @@ const HotelAccommodationSection = () => {
           <motion.div 
             className="text-left"
             initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 10.1 } : { duration: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={animationsEnabled ? { duration: 0.6, ease: "easeOut" } : { duration: 0 }}
           >
             <div className="flex items-start gap-4 mb-2">
               <div className="bg-foreground text-background rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">
@@ -88,8 +90,9 @@ const HotelAccommodationSection = () => {
           <motion.div 
             className="text-left"
             initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 10.3 } : { duration: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={animationsEnabled ? { duration: 0.6, ease: "easeOut", delay: 0.2 } : { duration: 0 }}
           >
             <div className="flex items-start gap-4 mb-2">
               <div className="bg-foreground text-background rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">
@@ -134,8 +137,9 @@ const HotelAccommodationSection = () => {
                 key={index}
                 className="text-center"
                 initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={animationsEnabled ? { duration: 0.6, delay: 10.7 + (index * 0.2) } : { duration: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={animationsEnabled ? { duration: 0.6, delay: index * 0.15 } : { duration: 0 }}
                 data-testid={`card-room-${index}`}
               >
                 {/* Room Image with Border */}

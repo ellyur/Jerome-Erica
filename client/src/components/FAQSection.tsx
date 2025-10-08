@@ -44,16 +44,18 @@ const FAQSection = () => {
       id="faq"
       className="section-pastel-blue py-4 px-4"
       initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
-      animate={{ opacity: 1 }}
-      transition={animationsEnabled ? { duration: 1, delay: 11.5 } : { duration: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={animationsEnabled ? { duration: 0.6 } : { duration: 0 }}
     >
       <div className="max-w-6xl mx-auto">
         {/* Frequently Asked Questions Header */}
         <motion.div 
           className="mb-8"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 11.7 } : { duration: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={animationsEnabled ? { duration: 0.6, ease: "easeOut" } : { duration: 0 }}
         >
           <div className="bg-foreground py-4 px-8 text-center">
             <h2 
@@ -71,8 +73,9 @@ const FAQSection = () => {
             <motion.div
               key={index}
               initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={animationsEnabled ? { duration: 0.6, ease: "easeOut", delay: 11.9 + (index * 0.1) } : { duration: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={animationsEnabled ? { duration: 0.6, ease: "easeOut", delay: index * 0.1 } : { duration: 0 }}
               data-testid={`faq-item-${index}`}
             >
               <div className="bg-foreground py-3 px-4 sm:px-6">
@@ -93,8 +96,9 @@ const FAQSection = () => {
         <motion.div 
           className="mb-16 max-w-4xl mx-auto"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 12.3 } : { duration: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={animationsEnabled ? { duration: 0.6, ease: "easeOut" } : { duration: 0 }}
         >
           <div className="bg-foreground py-3 px-4 sm:px-6">
             <h3 className="text-sm sm:text-base font-bold text-background" data-testid="text-rsvp-question">
@@ -112,8 +116,9 @@ const FAQSection = () => {
         <motion.div 
           className="mb-16"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 11.8 } : { duration: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={animationsEnabled ? { duration: 0.6, ease: "easeOut" } : { duration: 0 }}
         >
           {/* Black Header Bar */}
           <div className="bg-foreground py-4 px-8 mb-12 text-center">
@@ -141,8 +146,9 @@ const FAQSection = () => {
                   key={index}
                   className="flex items-center justify-center gap-4 md:gap-8 relative"
                   initial={animationsEnabled ? { opacity: 0, x: index % 2 === 0 ? -30 : 30 } : { opacity: 1, x: 0 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={animationsEnabled ? { duration: 0.6, delay: 12 + (index * 0.1) } : { duration: 0 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={animationsEnabled ? { duration: 0.6, delay: index * 0.1 } : { duration: 0 }}
                   data-testid={`timeline-event-${index}`}
                 >
                   {/* Left Side - Event Name or Image (alternating) */}

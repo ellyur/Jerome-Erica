@@ -9,16 +9,18 @@ const Footer = () => {
     <motion.footer 
       className="bg-foreground text-background py-16 px-4 relative overflow-hidden"
       initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
-      animate={{ opacity: 1 }}
-      transition={animationsEnabled ? { duration: 1, delay: 12.5 } : { duration: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={animationsEnabled ? { duration: 0.6 } : { duration: 0 }}
     >
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Main Footer Content */}
         <motion.div 
           className="text-center space-y-8"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 12.8 } : { duration: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={animationsEnabled ? { duration: 0.6, ease: "easeOut" } : { duration: 0 }}
         >
           {/* Closing Message */}
           <div className="max-w-3xl mx-auto space-y-4">

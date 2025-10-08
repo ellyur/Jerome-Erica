@@ -18,8 +18,9 @@ const DressCodeSection = () => {
       id="dresscode" 
       className="section-pastel-blue py-4 px-4"
       initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
-      animate={{ opacity: 1 }}
-      transition={animationsEnabled ? { duration: 1, delay: 7.5 } : { duration: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={animationsEnabled ? { duration: 0.6 } : { duration: 0 }}
     >
       <div className="max-w-6xl mx-auto">
         {/* Black Header Bar */}
@@ -43,8 +44,9 @@ const DressCodeSection = () => {
         <motion.div 
           className="mb-16"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 7.8 } : { duration: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={animationsEnabled ? { duration: 0.6, ease: "easeOut" } : { duration: 0 }}
         >
           {/* Bouquet Sponsors Header */}
           <div className="bg-foreground py-3 px-6 mb-6 max-w-md mx-auto">
@@ -78,8 +80,9 @@ const DressCodeSection = () => {
         <motion.div 
           className="mb-12"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 8.2 } : { duration: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={animationsEnabled ? { duration: 0.6, ease: "easeOut", delay: 0.2 } : { duration: 0 }}
         >
           {/* Guests Header */}
           <div className="bg-foreground py-3 px-6 mb-6 max-w-md mx-auto">
