@@ -141,8 +141,7 @@ const CountdownSection = () => {
             <img 
               src={our_love_story}
               alt="Our Family" 
-              className="w-full h-auto"
-              style={{ filter: 'grayscale(100%)' }}
+              className="w-full h-auto grayscale"
               data-testid="img-family-photo"
             />
           </div>
@@ -176,8 +175,7 @@ const CountdownSection = () => {
                 <img 
                   src={lovestory_bottom}
                   alt="Family Photo 1" 
-                  className="w-full h-auto"
-                  style={{ filter: 'grayscale(100%)' }}
+                  className="w-full h-auto grayscale"
                   data-testid="img-story-photo-1"
                 />
               </div>
@@ -187,8 +185,7 @@ const CountdownSection = () => {
                 <img 
                   src={lovestory_bottom1}
                   alt="Family Photo 2" 
-                  className="w-full h-auto"
-                  style={{ filter: 'grayscale(100%)' }}
+                  className="w-full h-auto grayscale"
                   data-testid="img-story-photo-2"
                 />
               </div>
