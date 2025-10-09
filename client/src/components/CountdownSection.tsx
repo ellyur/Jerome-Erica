@@ -153,9 +153,7 @@ const CountdownSection = () => {
 
           {/* Story Text */}
           <div className="max-w-4xl mx-auto text-left space-y-4 text-sm sm:text-base leading-relaxed px-4">
-            <p data-testid="text-story-paragraph-1">
-              Our love story began not with sudden passion, but with a deep friendship developed in the academic setting of 2017. Ericka was a vibrant social butterfly, radiating joy and laughter, while Jerome complemented her with his quiet charm and understanding nature. Together, they experienced a formative bond during their school years, sharing meaningful moments that revealed an unrecognized depth to their connection.
-            </p>
+            <p data-testid="text-story-paragraph-1">Our love story began not with sudden passion, but with a deep friendship developed in the academic setting of 2007. Ericka was a vibrant social butterfly, radiating joy and laughter, while Jerome complemented her with his quiet charm and understanding nature. Together, they experienced a formative bond during their school years, sharing meaningful moments that revealed an unrecognized depth to their connection.</p>
             <p data-testid="text-story-paragraph-2">
               As time passed, life led them on separate paths, culminating in a chance reunion in 2015, where the nostalgia awakened a buried spark between them. They no longer viewed each other merely as friends, but as essential companions. Their first date crystallized their feelings, unveiling a matured adoration that balanced Ericka's lively spirit with Jerome's calm demeanor, showcasing a harmonious blend of chaos and stability.
             </p>
