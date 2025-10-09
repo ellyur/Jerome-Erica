@@ -160,9 +160,7 @@ const CountdownSection = () => {
             <p data-testid="text-story-paragraph-3">
               The couple's journey encountered challenges, especially with the arrival of their children, Princess Jennae in 2017 and Prince Mavi in 2022. Parenthood brought both joy and immense stress, testing their relationship to its limits. In these challenging times, their friendship foundation shone through, demonstrating their ability to survive hardships and emerge resilient. Their children symbolize the couple's commitment and love, affirming their dedication to overcoming adversity together.
             </p>
-            <p data-testid="text-story-paragraph-4">
-              By October 2024, amidst the exhilaration of a Ne-Yo concert, Jerome proposed, symbolizing their journey, love, and dedication to each other. This moment encapsulated the excitement and promise they have built together. As they embark on this new chapter, they envision a future of shared adventures with their children and a continued embrace of life's beautiful chaos, grateful for the unwavering support of their family and friends who remind them that true love is fortified by community and shared encouragement.
-            </p>
+            <p data-testid="text-story-paragraph-4">By October 2024, amidst the exhilaration of a Ne-Yo concert, Jerome proposed, symbolizing their journey, love, and dedication to each other. This moment encapsulated the excitement and promise they have built together. As they embark on this new chapter, they envision a future of shared adventures with their children and a continued embrace of life's beautiful chaos, grateful for the unwavering support of their family and friends who remind them that true love is fortified by community and shared encouragement."</p>
           </div>
 
           {/* Family Photos Grid */}
