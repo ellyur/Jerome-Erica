@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { useAnimationContext } from '@/contexts/AnimationContext';
 import monogramImage from '@assets/Your_paragraph_text-removebg-preview_1760098096041.png';
 
+import Your_paragraph_text__2__removebg_preview from "@assets/Your_paragraph_text__2_-removebg-preview.png";
+
 const MonogramSection = () => {
   const { animationsEnabled } = useAnimationContext();
 
@@ -22,9 +24,9 @@ const MonogramSection = () => {
           transition={animationsEnabled ? { duration: 0.8, ease: "easeOut" } : { duration: 0 }}
         >
           <img 
-            src={monogramImage} 
+            src={Your_paragraph_text__2__removebg_preview} 
             alt="Jerome & Ericka Monogram" 
-            className="w-128 h-128 sm:w-160 sm:h-160 md:w-192 md:h-192 object-contain"
+            className="w-128 h-128 sm:w-160 sm:h-160 md:w-192 md:h-192 object-contain mt-[-83px] mb-[-83px] pt-[-14px] pb-[-14px]"
             data-testid="img-monogram"
           />
         </motion.div>
