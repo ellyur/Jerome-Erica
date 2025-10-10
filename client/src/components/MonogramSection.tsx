@@ -26,7 +26,7 @@ const MonogramSection = () => {
           <img 
             src={Your_paragraph_text__2__removebg_preview} 
             alt="Jerome & Ericka Monogram" 
-            className="w-128 h-128 sm:w-160 sm:h-160 md:w-192 md:h-192 object-contain mt-[-83px] mb-[-83px] pt-[-14px] pb-[-14px]"
+            className="w-128 h-128 sm:w-160 sm:h-160 md:w-192 md:h-192 object-contain pt-[-14px] pb-[-14px] mt-[-68px] mb-[-68px]"
             data-testid="img-monogram"
           />
         </motion.div>
