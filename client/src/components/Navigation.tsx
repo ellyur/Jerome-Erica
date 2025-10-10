@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import logoImage from '@assets/Your_paragraph_text__1_-removebg-preview_1760097970939.png';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -105,9 +106,12 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h2 className="text-xl font-times font-bold text-foreground tracking-wider">
-              J<span className="text-foreground">&</span>E
-            </h2>
+            <img 
+              src={logoImage} 
+              alt="J&E Logo" 
+              className="h-12 w-auto object-contain"
+              data-testid="img-logo"
+            />
           </div>
 
           {/* Desktop Navigation */}
