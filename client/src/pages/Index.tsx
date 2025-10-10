@@ -11,6 +11,7 @@ import HashtagGiftsSection from '@/components/HashtagGiftsSection';
 import HotelAccommodationSection from '@/components/HotelAccommodationSection';
 import RSVPSection from '@/components/RSVPSection';
 import FAQSection from '@/components/FAQSection';
+import MonogramSection from '@/components/MonogramSection';
 import Footer from '@/components/Footer';
 import MusicControl from '@/components/MusicControl';
 import { AnimationContext } from '@/contexts/AnimationContext';
@@ -103,6 +104,7 @@ const Index = () => {
           <DressCodeSection />
           <HashtagGiftsSection />
           <FAQSection />
+          <MonogramSection />
           <Footer />
         </main>
 
