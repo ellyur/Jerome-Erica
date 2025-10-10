@@ -24,7 +24,7 @@ const MonogramSection = () => {
           <img 
             src={monogramImage} 
             alt="Jerome & Ericka Monogram" 
-            className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 object-contain"
+            className="w-128 h-128 sm:w-160 sm:h-160 md:w-192 md:h-192 object-contain"
             data-testid="img-monogram"
           />
         </motion.div>
