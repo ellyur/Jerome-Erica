@@ -85,44 +85,49 @@ const Index = () => {
         Your browser does not support the audio element.
       </audio>
 
-      <div className="min-h-screen relative">
-        {/* Centered Background Logo */}
+      <div 
+        className="min-h-screen relative" 
+        style={{
+          backgroundImage: `url(${logoImage})`,
+          backgroundPosition: 'center center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: '50%',
+          backgroundAttachment: 'fixed',
+          opacity: 1
+        }}
+      >
         <div 
-          className="fixed inset-0 z-[5] flex items-center justify-center pointer-events-none"
-          style={{ opacity: 0.15 }}
-        >
-          <img 
-            src={logoImage} 
-            alt="Background Logo" 
-            className="w-auto h-auto max-w-[60%] max-h-[60%] object-contain"
-          />
-        </div>
-
-        <Navigation />
-
-        {/* Music Consent Popup */}
-        <MusicConsentPopup 
-          onConsent={handleMusicConsent} 
-          isVisible={showMusicConsent}
+          className="absolute inset-0 bg-background/80"
+          style={{ zIndex: 1 }}
         />
+        
+        <div className="relative" style={{ zIndex: 10 }}>
+          <Navigation />
 
-        {/* Main Content Sections */}
-        <main className="relative z-10">
-          <NewspaperHero />
-          <HeroSection />
-          <CountdownSection />
-          <VenueSection />
-          <HotelAccommodationSection />
-          <RSVPSection />
-          <DressCodeSection />
-          <HashtagGiftsSection />
-          <FAQSection />
-          <MonogramSection />
-          <Footer />
-        </main>
+          {/* Music Consent Popup */}
+          <MusicConsentPopup 
+            onConsent={handleMusicConsent} 
+            isVisible={showMusicConsent}
+          />
 
-        {/* Music Control - always show */}
-        <MusicControl audioRef={audioRef} />
+          {/* Main Content Sections */}
+          <main className="relative">
+            <NewspaperHero />
+            <HeroSection />
+            <CountdownSection />
+            <VenueSection />
+            <HotelAccommodationSection />
+            <RSVPSection />
+            <DressCodeSection />
+            <HashtagGiftsSection />
+            <FAQSection />
+            <MonogramSection />
+            <Footer />
+          </main>
+
+          {/* Music Control - always show */}
+          <MusicControl audioRef={audioRef} />
+        </div>
       </div>
     </AnimationContext.Provider>
   );
