@@ -15,6 +15,7 @@ import MonogramSection from '@/components/MonogramSection';
 import Footer from '@/components/Footer';
 import MusicControl from '@/components/MusicControl';
 import { AnimationContext } from '@/contexts/AnimationContext';
+import logoImage from '@assets/Your_paragraph_text__1_-removebg-preview_1760097970939.png';
 
 const Index = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -85,6 +86,18 @@ const Index = () => {
       </audio>
 
       <div className="min-h-screen relative">
+        {/* Centered Background Logo */}
+        <div 
+          className="fixed inset-0 z-0 flex items-center justify-center pointer-events-none"
+          style={{ opacity: 0.05 }}
+        >
+          <img 
+            src={logoImage} 
+            alt="Background Logo" 
+            className="w-auto h-auto max-w-[50%] max-h-[50%] object-contain"
+          />
+        </div>
+
         <Navigation />
 
         {/* Music Consent Popup */}
