@@ -85,21 +85,18 @@ const Index = () => {
         Your browser does not support the audio element.
       </audio>
 
-      <div 
-        className="min-h-screen relative" 
-        style={{
-          backgroundImage: `url(${logoImage})`,
-          backgroundPosition: 'center center',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: '50%',
-          backgroundAttachment: 'fixed',
-          opacity: 1
-        }}
-      >
+      <div className="min-h-screen relative">
+        {/* Centered Logo Watermark - Visible on top */}
         <div 
-          className="absolute inset-0 bg-background/80"
-          style={{ zIndex: 1 }}
-        />
+          className="fixed inset-0 flex items-center justify-center pointer-events-none"
+          style={{ zIndex: 5 }}
+        >
+          <img 
+            src={logoImage} 
+            alt="Background Logo" 
+            className="w-auto h-auto max-w-[60%] max-h-[60%] object-contain opacity-50"
+          />
+        </div>
         
         <div className="relative" style={{ zIndex: 10 }}>
           <Navigation />
