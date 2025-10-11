@@ -88,13 +88,13 @@ const Index = () => {
       <div className="min-h-screen relative">
         {/* Centered Background Logo */}
         <div 
-          className="fixed inset-0 z-0 flex items-center justify-center pointer-events-none"
-          style={{ opacity: 0.05 }}
+          className="fixed inset-0 z-[5] flex items-center justify-center pointer-events-none"
+          style={{ opacity: 0.15 }}
         >
           <img 
             src={logoImage} 
             alt="Background Logo" 
-            className="w-auto h-auto max-w-[50%] max-h-[50%] object-contain"
+            className="w-auto h-auto max-w-[60%] max-h-[60%] object-contain"
           />
         </div>
 
