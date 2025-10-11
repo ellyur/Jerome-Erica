@@ -1,7 +1,7 @@
-# Wedding Invitation Website
+# Wedding Save the Date Website
 
 ## Project Overview
-This is a wedding invitation website for Andrei & Sam's wedding on September 7, 2025. The project is a full-stack JavaScript application showcasing a beautiful wedding invitation with multiple sections including hero, slideshow, invitation details, countdown, story, venue information, RSVP, and more.
+This is a wedding save the date website for Jerome & Ericka's wedding on August 15, 2026. The project is a full-stack JavaScript application showcasing a beautiful save the date with multiple sections including hero, slideshow, countdown, story, venue information, RSVP, and more.
 
 ## Project Architecture
 - **Frontend**: React with TypeScript, Vite for bundling, Tailwind CSS + shadcn/ui for styling
@@ -13,8 +13,8 @@ This is a wedding invitation website for Andrei & Sam's wedding on September 7, 
 - **Audio**: Background music integration with user interaction triggers
 
 ## Key Features
-- Responsive wedding invitation website
-- Interactive hero section with invitation opening animation
+- Responsive wedding save the date website
+- Interactive hero section with save the date reveal animation
 - Background music that starts on user interaction
 - Interactive quiz game for invitation reveal (click pirates to start)
 - Score-based invitation designs (premium for 4-5 correct, standard for 0-3 correct)

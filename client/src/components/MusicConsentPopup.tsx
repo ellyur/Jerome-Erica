@@ -62,7 +62,7 @@ const MusicConsentPopup = ({ onConsent, isVisible }: MusicConsentPopupProps) => 
                 </div>
 
                 <p className="text-foreground leading-relaxed text-base md:text-lg font-times italic px-4">
-                  Would you like to play music to explore more of our wedding invitation?
+                  Would you like to play music to explore our save the date?
                 </p>
               </div>
 
