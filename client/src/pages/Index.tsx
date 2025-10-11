@@ -86,15 +86,15 @@ const Index = () => {
       </audio>
 
       <div className="min-h-screen relative">
-        {/* Centered Logo Watermark - Visible on top */}
+        {/* Centered Logo Watermark - Always visible on top of everything */}
         <div 
           className="fixed inset-0 flex items-center justify-center pointer-events-none"
-          style={{ zIndex: 5 }}
+          style={{ zIndex: 50 }}
         >
           <img 
             src={logoImage} 
             alt="Background Logo" 
-            className="w-auto h-auto max-w-[60%] max-h-[60%] object-contain opacity-50"
+            className="w-auto h-auto max-w-[60%] max-h-[60%] object-contain opacity-30"
           />
         </div>
         
